@@ -1,0 +1,542 @@
+@import "./common/mixin.styl";
+
+body
+  //background-image: url(./img/bg.png)
+  background-repeat: no-repeat
+  -ms-background-position-x: center
+  background-position-x: center
+  background-position-y: bottom;
+  &.modal-open
+    overflow hidden
+    padding-right 17px
+  &.pb-50
+    padding-bottom 50px
+
+h2.item-title
+  margin 5px 0 20px
+  font-size: 18px
+  line-height 28px
+  padding-right 25px
+  .icon
+    display block
+    float: left
+    margin-right 15px
+    width 30px
+    height 30px
+    background-repeat: no-repeat
+    &.website
+      background-image: url(./img/index-website-icon.png)
+    &.candy
+      background-image: url(./img/index-candy-icon.png)
+    &.deal
+      background-image: url(./img/index-deal-icon.png)
+
+.checkmore
+  float: right
+  font-size: 14px
+  font-weight: normal
+
+.old-browser
+  width 100%
+  background-color: #fcf8e3
+  border-bottom: 1px solid #f5e75a
+  text-align center
+  line-height 50px
+  color: #333
+  font-size: 16px
+  a
+    font-size: 16px
+    color: #3f52ff
+    text-decoration underline
+
+.btn
+  background-color: #EDC95A
+  color: #fff
+  border-radius 4px
+  border 0
+  cursor pointer
+  &.disabled
+    background-color: rgba(237, 201, 90, 0.6)
+    cursor not-allowed !important
+
+.btn:disabled
+  cursor not-allowed !important
+  background-color: rgba(237, 201, 90, 0.6)
+  cursor not-allowed !important
+
+.container
+  margin: 40px auto 0
+  .navigate
+    display block
+    .item
+      float: left
+      margin: 0 20px 10px 0
+      width 226px
+      height: 110px
+      background-color: #ffae05
+      border-radius: 4px
+      font-size: 0
+      text-align: center
+      overflow: hidden
+      cursor: pointer
+      transition margin-top 0.5s ease, margin-bottom 0.5s ease
+      border: 1px solid #999
+      -webkit-box-sizing: border-box
+      -moz-box-sizing: border-box
+      box-sizing: border-box
+      background-color: #fff
+      align-items center
+      overflow hidden
+      &:nth-child(5)
+        margin-right 0
+      &:nth-child(10)
+        margin-right 0
+      &.topUp
+        margin-top -5px
+        margin-bottom 15px
+        box-shadow 0 3px 8px rgba(0, 0, 0, .2)
+      .img
+        display flex
+        width 100%
+        height 100%
+        background-repeat: no-repeat
+        background-position-x: center
+        background-position-y: center
+        align-items center
+        img
+          //flex 1
+          display block
+          margin 0 auto
+          width 92%
+        &.zb
+          background-color: #000
+        &.bibox
+          background-color: #fff
+        &.gate
+          background-color: #df5858
+        &.huobi
+          background-color: #1E2631
+        &.okex
+          background-color: #041638
+        &.weex
+          background-color: #fff
+        &.bitfinex
+          background-color: #000
+        &.binance
+          background-color: #000
+        &.blockchain
+          background-color: #fff
+        &.poloniex
+          background-color: #fff
+  &.information
+    margin-bottom 37px
+    min-height 200px
+    .info-items
+      float: left
+      width 355px
+      margin-right 55px
+      &:first-child
+        margin-left 10px
+      &:last-child
+        margin-right 0
+      .tit
+        position relative
+        font-size: 16px
+        text-indent 18px
+        vertical-align: middle
+        line-height 18px
+        padding-bottom 8px
+        border-bottom 1px solid #f5f5f5
+        &:after
+          content ' '
+          position absolute
+          left 0
+          width 4px
+          height 18px
+          background-color: #EDC95A
+      .link
+        display inline-block
+        padding 10px 15px 0px
+        text-align center
+        color: #333
+        text-decoration underline
+
+.float-ads
+  display block
+  margin 15px auto 0
+  width 1210px
+  height 120px
+  background-image: url(./img/float-img.png)
+
+.footer
+  width 100%
+  &.float
+    //position fixed
+    left 0
+    bottom 0
+  .bg
+    background-image: url(./img/bg.png)
+    height 390px
+  .base
+    width 100%
+    background-color: #f5f5f5
+    border-top 1px solid #ccc
+    padding 10px 0
+    height 45px
+    z-index 99
+    .logo
+      margin-left 70px
+      margin-bottom 5px
+    .info
+      color: #999
+      font-size: 12px
+      margin-left 70px
+    .footer-href
+      margin 0 10px
+      text-decoration underline
+      color: #72ACE3
+
+.time-deadline
+  display none
+  position absolute
+  width 1210px
+  top 120px
+  color: red
+  font-size: 18px
+  text-align center
+  a
+    padding 0 10px
+    font-size: 18px
+    cursor pointer
+    color: #5695ff
+    text-decoration underline
+
+#initWrap
+  position fixed
+  background-color: transparent
+  width 100%
+  height 90%
+  top 100px
+  left 0
+  z-index: 999
+
+#regGetvCode, #forgetGetvCode
+  position absolute
+  top 10px
+  right 40px
+  padding 5px 10px
+  background-color: #fff
+  border 1px solid #aaa
+  color: #333
+  z-index 9999
+
+@keyframes showUp
+  from
+    opacity 0
+  to
+    opacity 1
+
+.telegram
+  margin-top 40px 
+  width: 70%
+  i.telegram
+    background-image: url(./img/index-telegram-icon.png)
+  .info-items
+    display flex
+    .link
+      flex 1
+      vertical-align: top
+      font-size: 14px
+      padding 12px 20px
+      &:hover
+        text-decoration underline
+.right
+  position absolute
+  right: 0
+  top 0
+  width: 25%
+  height 500px
+  border 1px solid red
+
+.candyInfo-wrap
+  margin-top 40px
+  width: 70%
+  .candyInfo-list
+    font-size: 0
+    .item
+      position relative
+      float: left
+      margin 0 40px 0 0
+      width 168px
+      background-color: #f2f2f2
+      border-radius 5px
+      overflow hidden
+      .img-wrap
+        width 170px
+        height 121px
+        text-align center
+        .logo-img
+          display block
+          margin 0 auto
+          width 70%
+      .info-detail
+        padding 8px 12px
+        background-color: #f9f8f6
+        .name
+          font-size: 18px
+          font-weight: bold
+          margin-bottom 5px
+          text-align center
+        .desc
+          width 100%
+          color: #999
+      .back-face
+        display none
+        position absolute
+        top 0
+        left 0
+        width 100%
+        height 100%
+        background-color: #fff
+        padding 10px 0
+        animation showUp 0.5s ease
+        .candyname
+          font-size: 18px
+          font-weight: bold
+          margin 0 10px 5px
+          text-align center
+        .desc
+          font-size: 14px
+          margin 0 10px 15px
+          font-size: 13px
+          color: #999
+        .give-me-coin
+          position absolute
+          bottom: 35px
+          display block
+          font-size: 18px
+          color: #fff
+          border-radius 999px
+          padding 6px 0
+          border 0
+          width 120px
+          left 50%
+          margin-left -60px
+          background-color: #c8a258
+          outline none
+          text-align center
+      &:hover .back-face
+        display block
+      &:last-child
+        margin-right 0
+
+#captchCodeImg, #captchCodeImg-2
+  position absolute
+  top 3px
+  right 38px
+  padding 0
+  margin 0
+  background-color: #fff
+  color: #333
+  z-index 9999
+  .captchCode-img
+    position relative
+    z-index -1
+    vertical-align: middle
+
+.float-wrap
+  position fixed
+  left 45px
+  top 12%
+  width 268px
+  height 464px
+  background-image: url(./img/float-img.png)
+  border-radius 5px
+  z-index 99
+  .close-float
+    float: right
+    margin 14px
+    width 14px
+    height 14px
+    background-repeat: no-repeat
+    background-image: url(./img/close.png)
+    z-index 999
+  .link
+    display block
+    height 464px
+
+@media screen and (max-width: 1367px)
+  #regGetvCode, #forgetGetvCode
+    top 2px
+    padding 2px 10px !important
+
+  .footer
+    .base
+      padding 5px
+      height 40px
+      p
+        margin-left 50px !important
+        font-size: 12px !important
+      .footer-href
+        font-size: 12px
+
+  .container
+    margin 20px auto
+    width 930px
+    .navigate
+      min-height 200px
+      .item
+        width 176px
+        height 100px
+        margin-bottom 10px
+        margin-right 12px
+        transition none
+        .img
+          -webkit-background-size: 70%
+          background-size: 70%
+          &.huobi
+            -webkit-background-size: 60%
+            background-size: 60%
+          &.bibox
+            -webkit-background-size: 50%
+            background-size: 50%
+        &.topUp
+          margin-top 0
+          margin-bottom 10px
+          box-shadow none
+
+  .float-ads
+    width 920px
+    height 90px
+    -webkit-background-size: 100%
+    background-size: 100%
+    background-repeat: no-repeat
+
+  .form-wrap
+    margin 20px auto !important
+    .form-wrap-header
+      padding 5px 20px !important
+      .head-router
+        font-size: 14px !important
+    .form-wrap-body
+      padding 10px 0 !important
+      .inp-wrap
+        margin 8px 10px 22px !important
+        font-size: 12px !important
+        input
+          padding 6px 10px 6px !important
+          font-size: 12px !important
+        .hint-err
+          right auto !important
+          left: 87px !important
+      .left-container .logo
+        margin-top 20px !important
+
+  .information
+    margin-top 20px !important
+    min-height 200px !important
+    .info-items
+      width 260px !important
+      .link
+        font-size 12px
+        padding 8px 15px 0 !important
+
+  .time-deadline
+    width 925px !important
+    top 80px !important
+    font-size: 14px
+    a
+      font-size 14px
+
+  #CaptchaCode, #CaptchaCode-2
+    width 203px !important
+    margin-right 122px !important
+
+  #captchCodeImg, #captchCodeImg-2
+    top -10px
+
+  #captchCodeImg-2
+    top 0px
+
+  #idea
+    width 80px !important
+    height 80px !important
+    -webkit-background-size: 100%
+    background-size: 100%
+
+  h2.item-title
+    font-size: 16px
+    line-height 35px
+    .icon
+      margin-right 5px
+      width 35px
+      height 35px
+      -webkit-background-size: 100%
+      background-size: 100%
+
+  .candyInfo-wrap
+    .candyInfo-list
+      .item
+        width 145px
+        margin 0 5px 10px
+        .img-wrap
+          width 145px
+          height 105px
+        .info-detail
+          .name
+            font-size: 14px
+          .desc
+            font-size 12px
+        .back-face
+          padding 10px 0
+          .candyname
+            font-size: 12px
+            margin-bottom 5px
+          .desc
+            font-size: 12px
+          .give-me-coin
+            padding 4px 12px
+            width 80px
+            font-size: 12px
+
+  .float-wrap
+    display none
+.cjdl-modal
+  .modal-wrap
+    width 819px
+    margin-bottom: 45px 
+    .modal-body
+      padding 0
+      background-image: url(./img/invite-act/act-modal.png)
+      min-height: 510px
+      .space
+        height 400px
+      .detail-btn
+        display block
+        text-align center
+        margin 0 auto 0
+        width 226px
+        height 75px
+        line-height: 70px
+        font-size 24.8px
+        color #333333
+        background-image: url(./img/invite-act/go-detail-btn.png)
+        letter-spacing: 1.5px
+  .close
+    color #ffffff
+    font-size 50px
+    text-align center
+    width 42px
+    height 42px
+    line-height 42px
+    border-radius 42px
+    margin 0 auto
+    background-color #3e3e3d
+    cursor pointer
+    background-image: url(./img/invite-act/Close.png)
+    background-position: center
+    background-repeat: no-repeat
+
+@media screen and (max-width: 1873px)
+  .float-wrap
+    display none

@@ -1,0 +1,246 @@
+@import "../common/mixin.styl";
+
+.modal-open
+  overflow hidden
+  padding-right 17px
+
+.banner
+  height 335px
+  background-image: url(../img/banner.png)
+  background-position: center
+
+.container
+  position relative
+
+.title
+  margin-top 30px
+  font-size: 24px
+  color: #c8a858
+
+.IHaveGoodProject
+  position absolute
+  right 40px
+  top 10px
+  .btn
+    display block
+    padding 5px 10px
+    color: #fff
+    border-radius 99px
+    background-color: #8cc152
+    font-size: 24px
+    margin-bottom 5px
+    cursor pointer
+    text-align center
+  .txt
+    color: #8cc152
+
+.radio-wrap
+  margin 20px 0
+  .radio-control
+    display inline-block
+    cursor pointer
+    margin-right 40px
+    .radio
+      float: left
+      position relative
+      display block
+      margin-right 10px
+      width 20px
+      height 20px
+      border: 3px solid #999
+      border-radius 999px
+      &.active:after
+        display block
+      &:after
+        display none
+        position absolute
+        border-radius 999px
+        content ' '
+        width 14px
+        height 14px
+        left 50%
+        top 50%
+        transform translate(-50%, -50%)
+        background-color: #c8a858
+    .radio-name
+      font-size: 16px
+      line-height 24px
+
+  .lab
+    display inline-block
+    width 120px
+    vertical-align: middle
+    font-size: 16px
+    input
+      margin-right 10px
+      width 20px
+      height 20px
+      vertical-align: middle
+      border: 2px solid #999
+
+.news-wrap
+  min-height 600px
+  margin-bottom 70px
+  .no-info
+    text-align center
+    line-height 240px
+    font-size: 20px
+  .news-item
+    display inline-block
+    border-radius 5px
+    background-color: #f2f2f2
+    width 48%
+    margin 20px 0
+    margin-right 20px
+    overflow hidden
+    vertical-align: top
+    &:nth-child(even)
+      margin-right 0
+    .img-wrap
+      display inline-block
+      width 210px
+      height: 214px
+      background-color: #eee
+      vertical-align: top
+      text-align center
+      img
+        vertical-align: middle
+        height 100%
+    .info-wrap
+      display inline-block
+      box-sizing border-box
+      padding 15px
+      width 370px
+      .wp-tit
+        font-size: 22px
+      .gotocoin
+        float: right
+        padding 2px 10px
+        line-height 25px
+        font-size: 16px
+        color: #c8a858
+        border 2px solid #c8a858
+        border-radius 99px
+      .summary
+        margin 10px 0 5px
+        font-weight: bold
+        font-size: 14px
+      .desc
+        font-size: 12px
+
+#mask
+  position: fixed
+  top: 0
+  left: 0
+  right 0
+  buttom 0
+  width 100%
+  height 100%
+  display: none
+  background-color: rgba(0, 0, 0, .5)
+  overflow-x hidden
+  overflow-y auto
+  .modal-wrap
+    display none
+    position: relative
+    margin 80px auto
+    width: 660px
+    background-color: #fff
+    border-radius: 4px
+    text-align: center
+    .modal-header
+      padding 10px 20px
+      font-size: 18px
+      color: #000
+      text-align left
+      border-bottom 1px solid #e6e6e6
+      &.not-border
+        border-bottom 0
+      .close-mask
+        display block
+        float: right
+        margin-top 5px
+        width 18px
+        height 18px
+        color: #000
+        cursor pointer
+        background-repeat: no-repeat
+        background-image: url(../img/close.png)
+      .head-router
+        font-size: 18px
+        margin 0 20px
+        line-height 20px
+        font-weight: bold
+        cursor pointer
+        &.active
+          color: #EDC95A
+
+#sellproject
+  .modal-body
+    padding 0 30px
+    .tips
+      margin 0 0 20px
+      font-size: 24px
+      font-size: 16px
+      text-align left
+  .btn-wrap
+    padding-bottom: 35px
+    .btn
+      padding 5px 45px
+      font-size: 24px
+      border-radius 99px
+      border: 2px solid #c8a858
+      margin 0 20px
+      cursor pointer
+      outline none
+      &.cannel
+        color: #c8a858
+        background-color: #fff
+      &#sumbitproject
+        color: #fff
+        background-color: #c8a858
+
+.form-control
+  position relative
+  margin-bottom 30px
+  text-align center
+  .tit
+    text-align left
+    margin 5px 0 10px
+    font-size 16px
+  input, textarea
+    border-radius 4px
+    border: 1px solid #dddddd
+    background-color: #fff
+    padding: 10px
+    width 100%
+    font-size: 14px
+    line-height 20px
+    box-sizing border-box
+    outline: none
+    &.err
+      border-color red
+  .hint-err
+    position absolute
+    bottom -18px
+    right 0
+    border-radius 4px
+    font-size: 12px
+    padding 0
+    text-align right
+    color: #D00000
+
+#successModal
+  .modal-body
+    padding 20px
+    .success-icon
+      margin 0 auto
+      width 177px
+      height 177px
+      background-image: url(../img/success.png)
+    .text
+      margin 40px 0
+      color: #333
+      font-size: 24px
+
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>关于快币浏览器</title>
+</head>
+<style>
+    html, body, p, div {
+        margin: 0;
+        padding: 0;
+        font-family: "Microsoft YaHei", -apple-system, sans-serif, 'Microsoft YaHei UI';
+    }
+
+    body {
+        background-color: #f1f1f1;
+    }
+
+    .about-title {
+        margin: 150px auto 10px;
+        width: 680px;
+        font-size: 14px;
+    }
+
+    .about-wp {
+        margin: 150px auto;
+        width: 680px;
+        -webkit-box-shadow: 0 2px 8px #ccc;
+        box-shadow: 0 2px 8px #ccc;
+        background-color: #fff;
+    }
+
+    .about-wp .item {
+        padding: 15px 20px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .about-wp .item .title {
+        font-size: 16px;
+        color: #666;
+    }
+
+    .about-wp .item:last-child {
+        border-bottom: 0;
+    }
+
+    .about-wp .item span {
+        font-size: 14px;
+        vertical-align: middle;
+    }
+
+    .about-wp .item .logo {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+        -webkit-background-size: 100%;
+        background-size: 100%;
+        vertical-align: middle;
+        background-image: url(data:image/png;base64,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);
+    }
+
+    .about-wp .item .browser-name {
+    }
+</style>
+<script>
+
+</script>
+<body>
+
+<div class="about-wp">
+    <div class="item">
+        <p class="title">关于 快币浏览器</p>
+    </div>
+    <div class="item">
+        <span class="logo"></span>
+        <p class="browser-name" style="display: inline-block;vertical-align: top;">
+            <span style="font-size: 18px;vertical-align: middle;display: inline-block">快币浏览器 · <span
+                    style="font-size: 14px;vertical-align: middle;margin-bottom: 3px;display: inline-block">区块链世界的传送门</span></span>
+            <span style="display: block;font-size: 12px;">www.kuaibi888.com</span>
+        </p>
+    </div>
+    <div class="item" style="padding: 20px 20px 0;color: #666;border-bottom: 0">
+        <span id="verson">内核版本：53.0.2785.89</span>
+    </div>
+    <div class="item" style="padding: 3px 20px 25px;color: #666">
+        <span>商务合作：kuaibi888@gmail.com</span>
+    </div>
+</div>
+</body>
+</html>

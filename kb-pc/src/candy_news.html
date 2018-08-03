@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <%= require('html-loader!./meta.html') %>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+<%= require('html-loader!./components/header.html') %>
+<div class="banner">
+
+</div>
+<div class="container">
+    <p class="title">糖果筛选</p>
+    <div class="IHaveGoodProject">
+        <a class="btn">项目推荐</a>
+        <p class="txt">我有更好的糖果项目推荐</p>
+    </div>
+    <div class="radio-wrap">
+        <a class="radio-control fix">
+            <i class="radio active"></i>
+            <span class="radio-name">全部</span>
+        </a>
+        <a class="radio-control fix" data-query-type="hot">
+            <i class="radio"></i>
+            <span class="radio-name">最热</span>
+        </a>
+        <a class="radio-control fix" data-query-type="news">
+            <i class="radio"></i>
+            <span class="radio-name">最新</span>
+        </a>
+        <a class="radio-control fix" data-query-type="online">
+            <i class="radio"></i>
+            <span class="radio-name">即将上线</span>
+        </a>
+    </div>
+
+    <div class="news-wrap">
+        <!--<div class="news-item">-->
+        <!--<div class="img-wrap">-->
+        <!--<img src="" alt="">-->
+        <!--</div>-->
+        <!--<div class="info-wrap">-->
+        <!--<p class="wp-tit">我时代峻-->
+        <!--<a href="" class="gotocoin">前往领取</a>-->
+        <!--</p>-->
+        <!--<p class="summary"></p>-->
+        <!--<p class="desc"></p>-->
+        <!--</div>-->
+        <!--</div>-->
+    </div>
+</div>
+
+<div id="mask">
+    <div class="modal-wrap" id="sellproject">
+        <div class="modal-header not-border fix"><a class="close-mask"></a></div>
+        <div class="modal-body">
+            <p class="tips">*请在下面填写您推荐正在私募的糖果项目信息，糖果项目被采纳后，我们将<span style="color: red;">赠送1000快币糖果</span>给您。
+            </p>
+            <div class="form-control">
+                <p class="tit">糖果项目链接地址：</p>
+                <input type="text" data-valid="require" placeholder="复制或输入链接地址" id="registUrl">
+                <span class="hint-err"></span>
+            </div>
+            <div class="form-control">
+                <p class="tit">项目介绍或推荐理由：</p>
+                <textarea data-valid="require" placeholder="请输入内容" id="description" cols="30" rows="10"></textarea>
+                <span class="hint-err"></span>
+            </div>
+        </div>
+        <div class="modal-footer btn-wrap">
+            <button class="btn cannel close-mask">取消</button>
+            <button class="btn " id="sumbitproject">提交</button>
+        </div>
+    </div>
+
+    <div class="modal-wrap" id="successModal">
+        <div class="modal-header not-border fix"><a class="close-mask"></a></div>
+        <div class="modal-body">
+            <div class="modal-body">
+                <div class="success-icon"></div>
+                <p class="text">已成功推荐，感谢您的参与</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

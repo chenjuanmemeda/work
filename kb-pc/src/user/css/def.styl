@@ -1,0 +1,167 @@
+@import "./user.styl";
+
+.header
+  position relative
+  padding 45px 0
+  background-image: url(../../img/usercener-bg.png)
+  .candyLog-btn
+    position absolute
+    top 20px
+    right 40px
+    cursor pointer
+    background-color: #f9f9f9
+    padding 5px 10px
+    border-radius 99px
+
+  .hedaer-candy
+    margin-left 200px
+    .icon
+      display inline-block
+      width 110px
+      height 110px
+      -webkit-background-size: 100%
+      background-size: 100%
+      background-image: url(../../img/candy-L.png)
+      vertical-align: middle
+    .text
+      vertical-align: middle
+      font-size: 24px
+    .getVip
+      position relative
+      margin-left 200px
+      border-radius 20px
+      color: #fff
+      padding 10px 30px
+      font-size: 16px
+      font-weight bold
+      background-color: #a25000
+      .crown
+        position absolute
+        top -31px
+        left -24px
+        width 70px
+        height 70px
+        background-repeat: no-repeat
+        background-image: url(../../img/angular-crown.png)
+
+
+.invitation-wrap
+  padding 20px 10px 50px
+  .info
+    font-size: 14px
+    line-height 32px
+    .lab
+      width 100px
+    .btn
+      background-color: #8CC152
+      width 70px
+      margin-left 20px
+      border-radius 20px
+
+.invitation-state
+  padding 0 0 50px
+  //text-align center
+  .tit
+    font-size: 18px
+    color: rgb(200, 168, 88)
+    text-align left
+    margin-bottom 20px
+  .state-list
+    font-size: 0
+    li
+      display inline-block
+      margin-right 60px
+      text-align center
+      .ball
+        width 100px
+        height 100px
+        line-height 100px
+        border-radius 999px
+        font-size: 32px
+        font-weight: bold
+        text-align center
+        vertical-align: middle
+        color: #666
+        box-shadow: 0px 4px 12px rgba(30, 30, 30, .1);
+      .text
+        margin 10px 0
+        color: red
+      .tip
+        color: #999
+      &:last-child
+        margin-right 0
+
+.rules-wrap
+  .tit
+    font-size: 18px
+    color: rgb(200, 168, 88)
+    text-align left
+    margin-bottom 20px
+  .info
+    padding 10px
+    border-radius 3px
+    border: 1px solid rgb(238, 238, 238)
+    p
+      margin-bottom 10px
+      line-height 16px
+      color: #999
+
+#candyLog
+  .candy-log-list
+    font-size: 0
+    margin 0 20px 20px
+    .log
+      border-top 1px solid #eee
+      padding 10px 20px
+      text-align left
+      .left-content
+        display inline-block
+        .info
+          display block
+          font-size: 18px
+          font-weight: bold
+          margin-bottom 5px
+        .date
+          display block
+          font-size: 12px
+          color: #999
+      .right-content
+        display inline-block
+        float: right
+        text-align center
+        .candy-count
+          color: red
+          font-size: 18px
+          font-weight: bold
+          &.green
+            color: green
+
+#pagination
+  font-size: 0
+  text-align center
+  margin-top 10px
+  height 30px
+  li
+    display inline-block
+    &.active
+      border-color red !important
+      color: #fff
+  .page
+    margin-right 10px
+    border-radius 3px
+    border: 1px solid #aaaaaa
+    a
+      display block
+      font-size: 12px
+      padding 3px 7px
+      line-height 14px
+      cursor pointer
+    &:hover
+      border-color #8cc152
+      background-color: #8cc152
+    &:hover a
+      color: #fff
+  .totalCount
+    padding 4px 5px
+    font-size: 12px
+

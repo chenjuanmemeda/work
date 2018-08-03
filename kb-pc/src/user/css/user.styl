@@ -1,0 +1,429 @@
+html, body, div, ul, li, p, a, input, button
+  margin: 0
+  padding: 0
+  font-size: 14px
+  color: #333
+  font-family "Microsoft YaHei UI", -apple-system, sans-serif
+
+body
+  height 100%
+  &.modal-open
+    overflow hidden
+    padding-right 17px
+
+ul, li, ol
+  list-style: none
+
+a
+  text-decoration: none
+
+table
+  border-collapse collapse
+  table-layout fixed
+
+.text-break
+  white-space nowrap
+  text-overflow ellipsis
+  overflow hidden
+
+.fix
+  &:after
+    display: table
+    content: ' '
+    height: 0
+    visibility: hidden
+    clear both
+
+.no-info
+  text-align center
+  line-height 150px
+  font-size: 18px
+  border 1px solid #eee
+  border-top: 0
+
+#idea
+  display block
+  position fixed
+  right 30px
+  bottom 80px
+  z-index 999
+  width 100px
+  height 100px
+
+@media screen and (max-width: 1367px)
+  #idea
+    width 80px
+    height 80px
+    -webkit-background-size: 100%
+    background-size: 100%
+
+button
+  border 0
+  color: #fff
+
+.captchCode-img
+  cursor pointer
+
+.btn
+  background-color: #EDC95A
+  color: #fff
+  border-radius 4px
+  border 0
+  cursor pointer
+  &.disabled
+    background-color: rgba(237, 201, 90, 0.6)
+    cursor not-allowed !important
+
+.btn:disabled
+  background-color: rgba(237, 201, 90, 0.6)
+  color: #fff !important
+  cursor not-allowed !important
+
+.user-center-headers
+  width 100%
+  padding 10px 0
+  background-color: #f9f9f9
+  font-size: 0
+  .header-wrap
+    width 1200px
+    margin 0 auto
+    .logo
+      display block
+      float: left
+      .icon
+        display inline-block
+        margin-right 10px
+        width 50px
+        height 50px
+        -webkit-background-size: 100%
+        background-size: 100%
+        background-image: url(../../img/logo.png)
+        vertical-align: middle
+      .text
+        display inline-block
+        font-size: 24px
+        color: #c29949
+        vertical-align: middle
+        span
+          font-size: 16px
+    .user-wrap
+      display flex
+      width 40px
+      line-height 50px
+      float: right
+      vertical-align: middle
+  #avatar
+    float: right
+    margin-top 5px
+    position: relative
+    display: inline-block
+    width: 40px
+    height: 40px
+    border-radius: 99px
+    background-color: #fff
+    cursor pointer
+    vertical-align: middle
+    -webkit-background-size: 100% 100%
+    background-size: 100% 100%
+    .user-info-wrap
+      display: none
+      position: absolute
+      top: 48px
+      right: -100px
+      z-index: 99
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
+      background-color: #fff
+      .user-info-header
+        width 410px
+        height 80px
+        background-image: url(../../img/user-info-header.png)
+        .border
+          position relative
+          height 10px
+          border-top: 2px solid #edc95a
+          &:before
+            position absolute
+            top -15px
+            left 0
+            width 100%
+            content ' '
+            background-color: transparent
+            height 15px
+          &:after
+            position absolute
+            content ' '
+            top -14px
+            right 113px
+            border-left 6px solid transparent
+            border-right 6px solid transparent
+            border-top 6px solid transparent
+            border-bottom 6px solid #EDC95A
+        .head
+          padding 0 0 12px
+          display flex
+          justify-content center
+          .left
+            flex 1
+            margin-left 12px
+            span
+              vertical-align: middle
+            .avatar
+              display inline-block
+              width 24px
+              height 24px
+              background-image: url(../../img/avatar-login.png)
+              -webkit-background-size: 100%
+              background-size: 100%
+          #logout
+            float: right
+            flex 0 0 50px
+            color: #999
+        .vipTime
+          margin-left 15px
+          font-size: 14px
+          .add_vip
+            padding 2px 10px
+            background-color: #8CC152
+            border-radius 20px
+            text-align center
+            color: #fff
+      .user-info-body
+        padding 15px 10px 20px
+        font-size: 0
+        .item
+          display block
+          float: left
+          background-repeat: no-repeat
+          border-radius: 999px
+          width 68px
+          height 68px
+          margin 0 5px
+          -webkit-background-size: 100% 100%
+          background-size: 100% 100%
+          text-align center
+          &.setting
+            background-image: url(../../img/head-icon-setting.png)
+          &.my-wallet
+            background-image: url(../../img/head-icon-mywallet.png)
+          &.candy-shop
+            background-image: url(../../img/head-icon-candy-shop.png)
+          &.vip
+            background-image: url(../../img/head-icon-vip.png)
+          &.def
+            background-image: url(../../img/head-icon-deafult.png)
+      .icon-name
+        span
+          display block
+          float: left
+          padding 0 5px
+          width 68px
+          text-align center
+      .text
+        display flex
+        padding 8px 50px 15px
+        span
+          flex 0 0 70px
+          text-align center
+    &.logout
+      background-image: url(../../img/avatar-default.png)
+      .user-info-wrap
+        display none
+    &:hover .user-info-wrap
+      display: block
+  .methods-wrap, .userName-wrap
+    display inline-block
+    float: right
+    margin 0 15px
+    vertical-align: middle
+    line-height 40px
+  .userName-wrap
+    display none
+
+.container
+  display flex
+  width 1200px
+  margin 0 auto
+  vertical-align: top
+  .left-container
+    flex 0 0 240px
+    background-color: #f2f2f2
+    margin-right 30px
+    color: #000
+    .user-info-wrap
+      border 1px solid #fff9e7
+      border-bottom 0
+      padding 30px 10px
+      background-color: #fff
+      #userAvatar
+        margin 0 auto
+        width 100px
+        height 100px
+        overflow hidden
+        border-radius 999px
+        background-color: #fff9e7
+      .user-name
+        text-align center
+        color: #c29949
+        width 170px
+        font-size: 22px
+        vertical-align: middle
+        padding 10px 0 20px
+        margin 0 auto
+      .data-wrap
+        text-align center
+        .item
+          display inline-block
+          margin-bottom 10px
+          .icon
+            display inline-block
+            margin-right 2px
+            width 24px
+            height 24px
+            vertical-align: middle
+            -webkit-background-size: 100%
+            background-size: 100%
+            &.candy
+              background-image: url(../../img/candy.png)
+            &.cash
+              background-image: url(../../img/cash.png)
+          .num
+            display inline-block
+            font-size: 16px
+            vertical-align: middle
+        .vipTime
+          margin-top 50px
+          margin-bottom 10px
+          color: #999
+        .add_vip
+          padding 2px 10px
+          background-color: #8CC152
+          border-radius 20px
+          text-align center
+          color: #fff
+          font-size: 16px
+    .menu-wrap
+      .menu-list
+        padding 20px 0
+        font-size: 0
+        .item
+          a
+            display block
+            padding 12px 0 12px 30px
+            font-size: 16px
+            color: #333
+            .icon
+              display inline-block
+              margin-right 10px
+              vertical-align: middle
+              &.invitation-icon
+                width 23px
+                height 25px
+                background-image: url(../../img/invitation-icon.png)
+              &.shop-icon
+                width 28px
+                height 25px
+                background-image: url(../../img/shop-icon.png)
+              &.vip-icon
+                width 28px
+                height 21px
+                background-image: url(../../img/vip-icon.png)
+              &.cash-icon
+                width 25px
+                height 22px
+                background-image: url(../../img/cash-icon.png)
+              &.setting-icon
+                width 24px
+                height 24px
+                background-image: url(../../img/setting-icon.png)
+              &.prize-icon
+                width 24px
+                height 24px
+                background-image: url(../../img/invite-act/prize-icon.png)
+            .text
+              vertical-align: middle
+              color: #666
+              font-size: 14px
+          &.active
+            background-color: #fff
+          &.active a
+            color: #c29949
+          &:hover
+            background-color: #fff
+          &:hover a
+            color: #c29949
+
+  .right-container
+    vertical-align: top
+    flex 1
+    width 920px
+    margin-bottom 50px
+
+#mask
+  position: fixed
+  top: 0
+  left: 0
+  right 0
+  buttom 0
+  width 100%
+  height 100%
+  display: none
+  background-color: rgba(0, 0, 0, .5)
+  overflow-x hidden
+  overflow-y auto
+  #maskWrap
+    position absolute
+    top 0
+    left 0
+  .modal-wrap
+    display none
+    position: relative
+    margin 120px auto
+    width: 660px
+    background-color: #fff
+    border-radius: 4px
+    text-align: center
+    .modal-header
+      padding 10px 20px
+      font-size: 18px
+      color: #000
+      text-align left
+      border-bottom 1px solid #e6e6e6
+      &.not-border
+        border-bottom 0
+      .close-mask
+        display block
+        float: right
+        margin-top 5px
+        width 18px
+        height 18px
+        color: #000
+        cursor pointer
+        background-repeat: no-repeat
+        background-image: url(../../img/close.png)
+      .head-router
+        font-size: 18px
+        margin 0 20px
+        line-height 20px
+        font-weight: bold
+        cursor pointer
+        &.active
+          color: #EDC95A
+    .modal-body
+      .tit
+        padding 20px
+        font-size: 24px
+        color: #c29949
+
+@media screen and (max-width: 1366px)
+  .header-wrap
+    .user-wrap
+      line-height 40px
+    .logo
+      .icon
+        width 40px !important
+        height 40px !important
+      .text
+        font-size: 20px !important
+
+  #avatar
+    margin-top 0 !important

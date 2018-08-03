@@ -1,0 +1,39 @@
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=9;IE=8;IE=7;IE=EDGE;">
+<link rel="shortcut icon" type="image/x-icon" href="http://www.kuaibi888.com/pub/icon/favicon.ico">
+<script>
+
+
+	(function () {
+		function getUrlParam(name) {
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+			var r = window.location.search.substr(1).match(reg);
+			if (r != null) {
+				return encodeURIComponent(unescape(r[2]));
+			}
+			return null;
+		}
+
+		var ua = window.navigator.userAgent.toLowerCase();
+
+		var whiteList = ['kuaibrowser', 'chrome/67.0.3396.99', 'chrome/67.0.3396.87', 'chrome/53.0.2785.89', 'chrome/69.0.3489.1','Chrome/68.0.3440.75'];
+
+		if (getUrlParam('website')) whiteList.push(getUrlParam('website'));
+
+		localStorage.setItem('whiteList', JSON.stringify(whiteList));
+
+		var maps = -1;
+		var lswhiteList = JSON.parse(window.decodeURIComponent(localStorage.getItem('whiteList')).toLowerCase()) || [];
+		
+		for (var i = 0; i < lswhiteList.length; i++) {
+
+			if (ua.indexOf(lswhiteList[i]) > 0) maps++;
+
+		}
+
+		if (maps < 0) {
+			window.location.href = 'http://www.kuaibi888.org';
+		}
+	})();
+
+</script>

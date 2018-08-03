@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <%= require('html-loader!../meta.html') %>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+<%= require('html-loader!../components/header.html') %>
+<div class="container fix">
+    <%= require('html-loader!./leftContainer.html') %>
+    <div class="right-container">
+        <div class="header">
+            <a class="candyLog-btn">糖果明细</a>
+            <div class="hedaer-candy fix">
+                <i class="icon"></i>
+                <span class="text" id="head-candyCount">---</span>
+                <a href="./candyShop.html" class="getVip">
+                    免费兑换VIP时长
+                    <i class="crown"></i>
+                </a>
+            </div>
+        </div>
+        <div class="invitation-wrap">
+            <p class="info">
+                <label class="lab">您的邀请码：</label>
+                <span id="sn"></span>
+                <input type="hidden" style="display: none;" id="snInp">
+                <button class="btn" id="clipSn" data-clipboard-text="">复制</button>
+            </p>
+            <p class="info">
+                <label class="lab">您的邀请链接：</label>
+                <span id="invitation_code"></span>
+                <button class="btn" id="clipSn_invitation_code" data-clipboard-text="">复制</button>
+            </p>
+        </div>
+        <div class="invitation-state">
+            <p class="tit">我的邀请状态</p>
+            <ul class="state-list">
+                <li>
+                    <p class="ball">M1</p>
+                    <p class="text" id="M1-count">-</p>
+                    <p class="tip" id="M1-Percent">获得 50% 收益</p>
+                </li>
+                <li>
+                    <p class="ball">M2</p>
+                    <p class="text" id="M2-count">-</p>
+                    <p class="tip" id="M2-Percent">获得 25% 收益</p>
+                </li>
+                <li>
+                    <p class="ball">M3</p>
+                    <p class="text" id="M3-count">-</p>
+                    <p class="tip">&nbsp;</p>
+                </li>
+                <li>
+                    <p class="ball">M4</p>
+                    <p class="text" id="M4-count">-</p>
+                    <p class="tip">&nbsp;</p>
+                </li>
+                <li>
+                    <p class="ball">M5</p>
+                    <p class="text" id="M5-count">-</p>
+                    <p class="tip">&nbsp;</p>
+                </li>
+                <li>
+                    <p class="ball">M6</p>
+                    <p class="text" id="M6-count">-</p>
+                    <p class="tip">&nbsp;</p>
+                </li>
+            </ul>
+        </div>
+        <div class="rules-wrap">
+            <p class="tit">邀请获得糖果规则</p>
+            <div class="info">
+                <p>M1完成注册获得3200糖果；M1在平台购买VIP后，你将获得充值金额的50%作为收益。如张三是你的M1，
+                    他购买了30天(价值¥30)VIP，你钱包会获得一笔来自张三充值佣金¥15(可提现)的收入；
+                </p>
+                <p>M2完成注册获得1600糖果；M2在平台购买VIP后，你将获得充值金额的25%作为收益。如李四是你的M2，
+                    他购买了30天(价值¥30)VIP，你钱包会获得一笔来自李四充值佣金¥7.5(可提现)的收入；</p>
+                <p>M3完成注册获得800糖果；</p>
+                <p>M4完成注册获得400糖果；</p>
+                <p>M5完成注册获得200糖果；</p>
+                <p>M6完成注册获得100糖果；</p>
+                <p>最多能获得6级内糖果奖励。</p>
+            </div>
+        </div>
+        <div class="form-wrap " id="recharge-wrap" style="display: none">
+            <div class="form-wrap-body invitation-wrap">
+                <!--<p class="info">-->
+                <!--<label class="lab">您的邀请码：</label>-->
+                <!--<span id="sn"></span>-->
+                <!--<input type="hidden" style="display: none;" id="snInp">-->
+                <!--<button class="btn" id="clipSn" data-clipboard-text="">复制</button>-->
+                <!--</p>-->
+                <!--<p class="info">-->
+                <!--<label class="lab">您的邀请链接：</label>-->
+                <!--<span id="invitation_code"></span>-->
+                <!--<button class="btn" id="clipSn_invitation_code" data-clipboard-text="">复制</button>-->
+                <!--</p>-->
+            </div>
+
+            <div class="form-wrap-body detail">
+                <div class="item">
+                    <p id="userCount" class="num">--</p>
+                    <p>已成功邀请</p>
+                </div>
+                <div class="item">
+                    <p id="totalTimes" class="num">--</p>
+                    <p>奖励总时长</p>
+                </div>
+                <div class="item">
+                    <p id="unReceiveTimes" class="num">--</p>
+                    <p>可领取时长
+                        <button class="btn" id="ReceiveTimes" style="margin-left: 5px;padding: 2px 12px">领取</button>
+                    </p>
+                </div>
+            </div>
+            <div id="invitation-wrap">
+                <div class="form-wrap-body invitation-list" style="margin: 0 10px;padding: 15px 10px">
+                    <table class="invitation-info">
+                        <thead>
+                        <tr>
+                            <th width="150">邀请用户</th>
+                            <th>注册时间</th>
+                            <th width="150">奖项时长（天）</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                    <!--<ul id="pagination">-->
+                    <!--<li class="page firstPage"><a>第一页</a></li>-->
+                    <!--<li class="page PreviousPage"><a>上一页</a></li>-->
+                    <!--<li class="page nextPage"><a>下一页</a></li>-->
+                    <!--<li class="page lastPage"><a>最后一页</a></li>-->
+                    <!--<li class="totalCount">-->
+                    <!--<span class="text"></span>-->
+                    <!--</li>-->
+                    <!--</ul>-->
+                    <p class="no-info">暂无信息</p>
+                </div>
+            </div>
+            <div class="form-wrap-footer">
+                <p class="tit">奖励规则</p>
+                <div class="info-wrap">
+                    <span class="info">1.邀请1人注册送7天。</span>
+                    <span class="info">2.邀请3人注册送15天。</span>
+                    <span class="info">3.邀请5人注册送90天。</span>
+                    <!--<span class="info">4.邀请超过20人额外奖励150天。</span>-->
+                    <span class="info">4.超过5人，每邀请注册1人送10天。</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="mask">
+    <div id="maskWrap"></div>
+    <div class="modal-wrap" id="candyLog">
+        <div class="modal-header fix"><a class="close-mask"></a></div>
+        <div class="modal-body">
+            <p class="tit">糖果明细</p>
+            <ul class="candy-log-list"></ul>
+            <ul id="pagination">
+                <!--<li class="page firstPage"><a>第一页</a></li>-->
+                <!--<li class="page PreviousPage"><a>上一页</a></li>-->
+                <li class="page nextPage"><a>下一页</a></li>
+                <li class="page lastPage"><a>最后一页</a></li>
+                <li class="totalCount">
+                    <span class="text"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

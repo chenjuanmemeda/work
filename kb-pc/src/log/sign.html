@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <%= require('html-loader!../meta.html') %>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+
+<div class="left-round"></div>
+<div class="left-item"></div>
+<div class="right-round"></div>
+<div class="other"></div>
+
+<div class="log-container fix">
+    <a href="../index.html" class="logo">
+        <i class="icon"></i>
+        <p class="text">快币浏览器 · <span>区块链世界的传送门</span></p>
+    </a>
+    <div class="form-wrap">
+        <div class="link-wrap fix">
+            <a href="javasciprt:;" class="link active">登录</a>
+            <a href="./register.html" class="link">注册</a>
+        </div>
+        <div class="form-control">
+            <i class="inp-icon phone"></i>
+            <input data-valid="require, mobile" type="text" placeholder="手机号/用户名" id="mobile"/>
+            <span class="hint-err"></span>
+            <i class="icon-err"></i>
+        </div>
+        <div class="form-control" style="margin-bottom: 10px">
+            <i class="inp-icon lock"></i>
+            <input data-valid="require, password" type="password" placeholder="请输入6-15位密码" id="pwd"/>
+            <span class="hint-err"></span>
+            <i class="icon-err"></i>
+        </div>
+        <div class="form-control fix">
+            <a href="./forget_password.html" style="text-decoration: underline" class="forgetpassword">忘记密码？</a>
+        </div>
+        <div class="form-control">
+            <button class="submit" id="loginSubmit">登录</button>
+        </div>
+        <p class="bottom-text">欢迎来到快币浏览器 www.kuaibi888.com</p>
+    </div>
+    <div class="img-wrap"></div>
+</div>
+</body>
+</html>

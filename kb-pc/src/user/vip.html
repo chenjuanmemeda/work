@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <%= require('html-loader!../meta.html') %>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+<%= require('html-loader!../components/header.html') %>
+
+<div class="container fix">
+    <%= require('html-loader!./leftContainer.html') %>
+    <div class="right-container">
+        <div class="vip-wrap">
+            <p class="tit">VIP会员</p>
+            <div class="recharge-wrap">
+                <p class="ul-tit">开通VIP
+                    <!--<a href="./candyShop.html"><i class="crown"></i><span>糖果兑换VIP时长</span></a>-->
+                </p>
+                <ul class="recharge-item-list fix">
+                    <li class="item gotocandy">
+                        <a class="goto-candychop" href="./candyShop.html">
+                            <i class="icon"></i>
+                            <span class="text">免费兑换
+                                <br>
+                                VIP时长</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="pay-type">
+                <p class="lab">支付方式：</p>
+            </div>
+            <button class="btn" id="paySubmit">支付</button>
+            <div class="vip-desc">
+                <p class="vip-tit">VIP特权</p>
+                <ul class="desc-list fix">
+                    <li class="item">
+                        <p class="icon icon-1"></p>
+                        <p class="strong">绿色上网</p>
+                        <p class="info">跨境资产交易更方便</p>
+                    </li>
+                    <li class="item">
+                        <p class="icon icon-2"></p>
+                        <p class="strong">资源丰富</p>
+                        <p class="info">支持大部分主流交易所</p>
+                    </li>
+                    <li class="item">
+                        <p class="icon icon-3"></p>
+                        <p class="strong">快速便捷</p>
+                        <p class="info">简介首页快速导航</p>
+                    </li>
+                    <li class="item">
+                        <p class="icon icon-4"></p>
+                        <p class="strong">更多内容</p>
+                        <p class="info">更多内容敬请期待</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="mask">
+    <div id="maskWrap"></div>
+    <div class="modal-wrap" id="rechargeSuccess">
+        <!--<div class="modal-header not-border fix"><a class="close-mask"></a></div>-->
+        <div class="modal-body">
+            <div class="success-icon"></div>
+            <p class="text">恭喜你</p>
+            <p class="detail">开通快币VIP30天</p>
+            <p class="date">有效期至2019-99-99 99:99:99</p>
+            <button class="btn close-mask">确定</button>
+        </div>
+    </div>
+
+    <div class="modal-wrap" id="payPasswordInp">
+        <div class="modal-header not-border fix"><a class="close-mask"></a></div>
+        <div class="modal-body">
+            <p class="modal-tit">请输入支付密码</p>
+            <p class="pay-amount">---</p>
+            <input type="password" id="payPassword" placeholder="请输入支付密码">
+            <a class="forget-password" href="./setting/payPassword.html">
+                <span class="amount-fall" style="color: red;font-size: 18px;float: left;display: none;">余额不足</span>
+                忘记密码？
+            </a>
+            <!--<div class="success-icon"></div>-->
+            <!--<p class="text">恭喜你</p>-->
+            <!--<p class="detail">开通快币VIP30天</p>-->
+            <!--<p class="date">有效期至2019-99-99 99:99:99</p>-->
+            <button class="btn" id="confirmPayPassword">确定</button>
+        </div>
+    </div>
+    <!-- 设置支付密码 -->
+    <div class="modal-wrap" id="settingPassword">
+        <div class="modal-header not-border fix"><a class="close-mask"></a></div>
+        <div class="modal-body">
+            <div class="warning-icon"></div>
+            <p class="info">为了您的账户安全，请先设置支付密码！</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn close-mask cannel">取消</button>
+            <a href="./setting/payPassword.html" class="btn close-mask ok" style="display: inline-block">确定</a>
+        </div>
+    </div>
+
+    <div class="modal-wrap" id="successModal">
+        <div class="modal-header not-border fix"><a class="close-mask"></a></div>
+        <div class="modal-body">
+            <div class="modal-body">
+                <div class="success-icon"></div>
+                <p class="detail">充值成功！</p>
+                <button class="btn close-mask">确定</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+<form action="http://pay1.youyunnet.com/pay/" id="rechargeForm" style="display: none">
+    <input type="text" name="pid">
+    <input type="text" name="money">
+    <input type="text" name="lb">
+    <input type="text" name="data">
+    <input type="text" name="m">
+    <input type="text" name="url">
+    <!--<input type="text" name="bk">-->
+</form>
+</div>
+</body>
+</html>

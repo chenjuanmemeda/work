@@ -1,0 +1,153 @@
+@import "../common/mixin.styl"
+
+.container
+  width 1065px
+
+.title
+  font-size: 30px
+  color: #edc95a
+  text-align center
+  margin 60px 0 30px
+  font-weight: normal
+
+.lab
+  font-size: 16px
+  margin-bottom 15px
+  font-weight: bold
+  .lab-small
+    color: #999
+    font-size: 14px
+    font-weight: normal
+
+.tips
+  margin-bottom 20px
+  color: #999
+  font-size: 16px
+
+textarea
+  resize none
+
+.form-control
+  position relative
+  margin-bottom 30px
+  text-align center
+  input, textarea
+    border-radius 4px
+    border: 1px solid #dddddd
+    background-color: #fff
+    padding: 10px
+    width 100%
+    font-size: 14px
+    line-height 20px
+    box-sizing border-box
+    outline: none
+    &.err
+      border-color red
+  .hint-err
+    position absolute
+    bottom -18px
+    right 0
+    border-radius 4px
+    font-size: 14px
+    padding 0
+    text-align right
+    color: #D00000
+  .upload
+    float: left
+    margin-right 20px
+    display block
+    width 100px
+    height 100px
+    border-radius 5px
+    border: 1px solid #ddd
+    cursor pointer
+    .add
+      display block
+      line-height 70px
+      margin 34px auto
+      width 32px
+      height 32px
+      background-image: url(../img/add.png);
+    #add_img
+      display none
+  .img-list
+    display inline-block
+    vertical-align: top
+    .img-item
+      position relative
+      float: left
+      margin-right 10px
+      width 100px
+      height 100px
+      border-radius 5px
+      border: 1px solid #ddd
+      cursor pointer
+      overflow hidden
+      img
+        width 100%
+        height 100%
+      .removeImg
+        display none
+        position absolute
+        top 0
+        left 0
+        width 100%
+        height 100%
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index 99
+        .remove-icon
+          display block
+          margin 0 auto
+          margin 34px auto
+          width 32px
+          height 32px
+          background-image: url(../img/removeImg.png);
+
+      &:hover .removeImg
+        display block
+
+.btn
+  background-color: #edc95a
+  color: #fff
+  padding 10px 50px
+  border-radius 999px
+  border: 0
+  font-size: 26px
+  cursor pointer
+  outline none
+  &:disabled
+    cursor not-allowed !important
+    background-color: rgba(237, 201, 90, 0.6)
+    cursor not-allowed !important
+
+.notice-alert
+  position fixed
+  top 0
+  left 0
+  width 100%
+  height 100%
+  background-color: rgba(0, 0, 0, .6)
+  overflow-x hidden
+  overflow-y auto
+  .alert-msg
+    position relative
+    margin 150px auto
+    width 400px
+    min-height 180px
+    background-color: #fff
+    border-radius 5px
+    box-sizing border-box
+    line-height 48px
+    text-align center
+    p
+      color: #c8a858
+      font-size: 20px
+    .success
+      display inline-block
+      width 48px
+      height 48px
+      margin-right 15px
+      vertical-align: top
+      background-image: url(../img/idea-success.png)
+    .idea-ok
+      border-top 1px solid #eee

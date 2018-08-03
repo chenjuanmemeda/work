@@ -1,0 +1,140 @@
+@import "./user.styl";
+
+.tit
+  margin 30px 0 35px
+  color: #c29949
+  text-align: center
+  font-size: 24px
+
+.setting-wrap
+  .user-detail
+    .avatar-block
+      float: left
+      text-align center
+      .avatar
+        display block
+        width 200px
+        height 200px
+        margin 0 auto
+        background-color: #fff9e7
+      .avatar-lab
+        display inline-block
+        margin-top 15px
+        padding 5px 15px
+        border 2px solid #c29949
+        border-radius 99px
+        background-color: #fff
+        color: #c29949
+        font-size: 18px
+        cursor pointer
+        #changeAvatar
+          display none
+          height 0
+
+  .form-wrap
+    float: left
+    .form-control
+      margin-bottom 25px
+      .form-lab
+        display inline-block
+        width 140px
+        font-size: 16px
+        line-height 60px
+        text-align right
+      .form-inp, .form-select
+        border-radius 5px
+        padding 20px 25px
+        font-size: 15px
+        border: 1px solid #eee
+        width 440px
+        box-sizing border-box
+        vertical-align: middle
+        &#loginName
+          display none
+      .editUserName
+        color: #c29949
+        font-size: 16px
+        margin 0 15px
+        cursor pointer
+      .radio-lab
+        display inline-block
+        font-size: 16px
+        line-height 30px
+        margin 0 20px
+        input[type="radio"]
+          width 16px
+          height 16px
+          margin-right 5px
+          vertical-align: middle
+      .btn
+        background-color: #8cc152
+        padding 10px 40px
+        font-size: 20px
+        border-radius 99px
+        font-weight: bold
+  .btn-wrap
+    margin-top 25px
+    .btn
+      margin-left 270px
+      border-radius 99px
+      padding 3px 35px
+      font-size: 20px
+      background-color: #8cc152
+
+.methods-block
+  border-top 1px solid #eee
+  margin-top 60px
+  .methods-list
+    font-size: 0
+    margin-top 60px
+    .item
+      float: left
+      margin 0 35px
+      width 225px
+      height 290px
+      border: 1px solid #eee
+      .wrap
+        display block
+        .icon
+          display block
+          margin 20px auto
+          background-repeat: no-repeat
+          &.lock
+            width 55px
+            height 80px
+            background-image: url(../../img/lock.png)
+          &.phone
+            width 51px
+            height 84px
+            background-image: url(../../img/phone.png)
+          &.shield
+            width 67px
+            height 80px
+            background-image: url(../../img/shield.png)
+        .info
+          span
+            display block
+            text-align center
+          .text-tit
+            font-size: 24px
+          .text-info
+            margin 10px 0 20px
+            font-size: 16px
+            color: #999
+          .methods-btn
+            display block
+            margin 15px auto
+            padding 4px 10px
+            width 80px
+            text-align center
+            font-size: 16px
+            color: #c29949
+            border: 1px solid #c29949
+            background-color: #fff
+            border-radius 99px
+            cursor pointer
+
+
+
+
+

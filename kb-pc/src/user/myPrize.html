@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <%= require('html-loader!../meta.html') %>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+<%= require('html-loader!../components/header.html') %>
+
+<div class="container">
+    <%= require('html-loader!./leftContainer.html') %>
+    <div class="right-container">
+        <div class="prize-wrap">
+            <p class="tit">我的奖品<span class="ling open-modal" data-modal="getRecord">兑换记录</span><span class="ling zhong open-modal" data-modal="winRecord">中奖记录</span></p>
+            <div class="rank-wrap">
+                <p class="title">本期排名  (2018-08)</p>
+                <p class="rank-num">05<span>名</span></p>
+                <div class="icon left"></div>
+                <div class="icon right"></div>
+                <div class="content">
+                    <p>邀请奖励：</p>
+                    <p>获得3个ETM,活动结束即可领取（本期结束时间：</p>
+                    <p>2018-05-12  23：59:59）</p>
+                </div>
+                <div class="btn">全部领取</div>
+            </div>
+            <ul class="prize-card-wrap">
+                <li class="item">
+                    <div class="pic"></div>
+                    <p class="pic-txt">ETH</p>
+                    <div class="content">
+                        <p class="lei">累计获得:<span>10</span>个</p>  
+                        <p class="dang">当前获得:<span>10</span>个</p>       
+                        <p class="lei">钱包地址:<i class="write-icon"></i></p> 
+                        <p class="address">111111111111111111111111111111111111</p>   
+                    </div>
+                    <button class="get">领取</button>
+                </li>
+                <li class="item">
+                    <div class="pic"></div>
+                    <p class="pic-txt">ETH</p>
+                    <div class="content">
+                        <p class="lei">累计获得:<span>10</span>个</p>  
+                        <p class="dang">当前获得:<span>10</span>个</p>       
+                        <p class="lei">钱包地址:<i class="write-icon"></i></p> 
+                        <p class="address">111111111111111111111111111111111111</p>   
+                    </div>
+                    <button class="get">领取</button>
+                </li>
+                <li class="item">
+                    <div class="pic"></div>
+                    <p class="pic-txt">ETH</p>
+                    <div class="content">
+                        <p class="lei">累计获得:<span>10</span>个</p>  
+                        <p class="dang">当前获得:<span>10</span>个</p>       
+                        <p class="lei">钱包地址:<i class="write-icon"></i></p> 
+                        <p class="address">111111111111111111111111111111111111</p>   
+                    </div>
+                    <button class="get">领取</button>
+                </li>
+            </ul>
+
+
+
+
+
+
+
+
+
+
+            <!-- 分割线                       -->
+            <ul class="prize-card">
+                <li class="item">我的奖品</li>
+            </ul>
+            <ul class="card-list fix" >
+                <li class="card" style="background-color:rgba(168, 201, 127, 1);">
+                    <div class="content-wrap">
+                        <span class="card-content left">
+                            <p>本期排名</p>
+                            <p>2018-08</p>
+                            <p>邀请奖励</p>
+                        </span>
+                        <span class="card-content middle">
+                            <span>99+</span>
+                            <p style="font-size: 10px;">当前排名不能获得奖励,邀请好友注册，冲刺TOP10即可获得海量数字货币，还能得到糖果</p>
+                            <button class="btn open-modal" data-modal="receiveSuccess">领取</button>
+                            <!-- <p>本期截止时间2018-08-31 23:59:59</p> -->
+                        </span>
+                    </div>
+                </li>
+                <li class="card" style="background-color:rgba(78, 186, 255, 1)">
+                    <div class="content-wrap">
+                        <span class="card-content left">
+                            <img src="" alt="" class="card-img"  width="48px" height="48px">
+                            <p class="en">ETH</p>
+                        </span>
+                        <span class="card-content middle">
+                            <p>累计获得<span>0个</span></p>
+                            <p>当前可领<span>0个</span></p>
+                            <p>钱包地址<span></span><span class="open-modal" data-modal="walletAddress">icon</span></p>
+                            <button class="btn open-modal" data-modal="receiveSuccess">领取</button>
+                        </span>
+                        
+                    </div>
+                </li>
+                <li class="card" style="background-color:rgba(168, 129, 254, 1);">
+                    <div class="content-wrap">
+                        <span class="card-content left">
+                            <img src="" alt="" class="card-img"  width="48px" height="48px">
+                            <p class="en">EOS</p>
+                        </span>
+                        <span class="card-content middle">
+                            <p>累计获得<span>0个</span></p>
+                            <p>当前可领<span>0个</span></p>
+                            <p>钱包地址<span class="address"></span><span class="open-modal" data-modal="walletAddress">icon</span></p>
+                            <button class="btn open-modal" data-modal="receiveSuccess">领取</button>
+                        </span>
+                    </div>
+                </li>
+                <li class="card" style="background-color:rgba(252, 123, 81, 1);">
+                    <div class="content-wrap">
+                        <span class="card-content left">
+                            <img src="" alt="" class="card-img"  width="48px" height="48px">
+                            <p class="en">ADA</p>
+                        </span>
+                        <span class="card-content middle">
+                            <p>累计获得<span>0个</span></p>
+                            <p>当前可领<span>0个</span></p>
+                            <p>钱包地址
+                                <span>111</span>
+                                <span class="open-modal" data-modal="walletAddress">icon</span>
+                            </p>
+                            <button class="btn open-modal" data-modal="receiveSuccess">领取</button>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="search-form-wrap fix" id="recordList">
+                <li class="item active" data-switch-index='0'>中奖纪录</li>
+                <li class="item"  data-switch-index='1'>提取纪录</li>
+            </ul>
+            <div class="search-form-list active" data-form-index='0'>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th width="200">奖品</th>
+                            <th width="140">中奖时间</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>VIP一个月</td>
+                                <td>2018-4-13 14:41:19</td>
+                            </tr>
+                            <tr>
+                                <td>VIP一个月</td>
+                                <td>2018-4-13 14:41:19</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+            <div class="search-form-list" data-form-index='1'>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名称</th>
+                        <th>领取时间</th>
+                        <th>状态</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>VIP一个月</td>
+                            <td>2018-4-13 14:41:19</td>
+                            <td>代转账</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="cjdl-modal" data-name="receiveSuccess">
+    <div class="modal-wrap">
+        <div class="modal-header no-br fix">
+            <h3 class="title" style="text-align: center;width: 90%;">领取成功</h3>
+            <i class="ion ion-ios-close-empty close-mask close-modal"></i>
+        </div>
+        <div class="modal-body">
+            <div class="success-img">
+                img
+            </div>
+            <p>领取成功</p>
+            <p>快币客服会在7个工作日完成转账</p>
+            <a class="btn close-modal" >确定</a>
+        </div>
+    </div>
+</div>
+
+<div class="cjdl-modal big" data-name="walletAddress">
+    <div class="modal-wrap">
+        <div class="modal-header no-br fix">
+            <h3 class="title" style="text-align: center;width: 90%;"><span>EOS</span>钱包地址</h3>
+            <i class="ion close-mask close-modal"></i>
+        </div>
+        <div class="modal-body">
+            <p style="color: #999999; font-size: 10px;text-align: left;padding-bottom: 5px;">*为了保证您正常收到奖品，请填写正确的钱包地址。</p>
+            <input type="text" placeholder="&nbsp请输入钱包地址" style="height: 50px;width: 100%;margin-bottom: 10px;"  maxLength=100 id="walletAddress">
+            <p style="text-align: left;color:red;padding-bottom: 20px;display: none;" class="error"><i></i>请输入正确的钱包地址</p>
+            <a class="more" id="walletCheck">保存</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- 中奖纪录 -->
+<div class="cjdl-modal big" data-name="winRecord">
+    <div class="modal-wrap">
+        <div class="modal-header no-br fix">
+            <h3 class="title" >中奖纪录</h3>
+            <i class="ion close-mask close-modal close-record"></i>
+        </div>
+        <div class="modal-body">
+            <table>
+                <tbody class="winRecord">
+                    <tr>
+                        <td>VIP一个月</td>
+                        <td class="time">2018-12-12  14:23:12</td>
+                    </tr>
+                    <tr>
+                        <td>VIP一个月</td>
+                        <td class="time">2018-12-12  14:23:12</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a class="more" id="walletCheck">点击加载更多</a>
+        </div>
+    </div>
+</div>
+
+<!-- 领取纪录 -->
+<div class="cjdl-modal big" data-name="getRecord">
+        <div class="modal-wrap">
+            <div class="modal-header no-br fix">
+                <h3 class="title">兑换纪录</h3>
+                <i class="ion close-mask close-modal close-record"></i>
+            </div>
+            <div class="modal-body">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>ETH*5个<span class="turn-time">2018-12-12  14:23:12</span></td>
+                            <td class="wait">待转账</td>
+                        </tr>
+                        <tr>
+                            <td>ETH*5个<span class="turn-time">2018-12-12  14:23:12</span></td>
+                            <td class="error">转账失败<span class="small">（钱包地址错误）</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a class="more" id="walletCheck">点击加载更多</a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

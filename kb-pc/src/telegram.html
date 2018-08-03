@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <%= require('html-loader!./meta.html') %>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+<%= require('html-loader!./components/header.html') %>
+<a style="cursor: pointer" id="telegramModalOpen">
+    <img src="${require('./img/telegram-banner.png')}" alt="">
+</a>
+
+<div class="container">
+    <div class="search-wrap fix">
+        <ul class="type-list">
+            <li class="type active" data-value="">全部</li>
+            <li class="type" data-value="1">币种交流</li>
+            <li class="type" data-value="2">交易平台</li>
+            <li class="type" data-value="3">其它电报群</li>
+        </ul>
+        <div class="search-bar">
+            <input type="text" placeholder="请输入关键字搜索" id="searchKey">
+            <button id="search">
+                <i class="search-icon"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="telegram-list-wrap">
+        <ul class="list fix">
+            <li class="item">
+                <p class="left-content">
+                    <span class="name">比特币交流群</span>
+                    <a href="javascript:;" class="link"></a>
+                </p>
+                <p class="icon"></p>
+            </li>
+        </ul>
+        <!--<a href="javascript:;" class="more">浏览更多 >></a>-->
+    </div>
+</div>
+
+<div id="mask">
+    <div class="modal-wrap" id="telegramModal">
+        <div class="modal-header not-border fix"><a class="close-mask"></a></div>
+        <div class="modal-body">
+            <p class="tips">*请在下面填写您想推荐的电报群，电报群被采纳后，我们将<span style="color: red;">赠送1000快币糖果</span>给您。
+            </p>
+            <div class="form-control">
+                <p class="tit">电报群链接地址：</p>
+                <input type="text" data-valid="require" placeholder="" id="telegramUrl">
+                <span class="hint-err"></span>
+            </div>
+            <!--<div class="form-control">-->
+            <!--<p class="tit">电报群名称：</p>-->
+            <!--<input type="text" data-valid="require" placeholder="">-->
+            <!--<span class="hint-err"></span>-->
+            <!--</div>-->
+            <div class="form-control">
+                <p class="tit">电报群介绍或推荐理由：</p>
+                <textarea data-valid="require" placeholder="请输入内容" id="reason" cols="30" rows="10"></textarea>
+                <span class="hint-err"></span>
+            </div>
+        </div>
+        <div class="modal-footer btn-wrap">
+            <button class="btn cannel close-mask">取消</button>
+            <button class="btn " id="sumbitproject">提交</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

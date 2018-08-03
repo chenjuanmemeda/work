@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <%= require('html-loader!../meta.html') %>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+<%= require('html-loader!../components/header.html') %>
+
+<div class="container fix">
+    <%= require('html-loader!./leftContainer.html') %>
+    <div class="right-container">
+        <div class="setting-wrap">
+            <p class="tit">基本设置</p>
+            <div class="user-detail fix">
+                <div class="avatar-block">
+                    <img src="" alt="" class="avatar">
+                    <label for="changeAvatar" class="avatar-lab">
+                        <input type="file" id="changeAvatar" class="fileUpload" name="files"></input>
+                        更换头像
+                    </label>
+                </div>
+                <div class="form-wrap">
+                    <div class="form-control">
+                        <label class="form-lab">昵称：</label>
+                        <input id="nickname" type="text" placeholder="" class="form-inp">
+                    </div>
+                    <div class="form-control" id="loginNameWrap" style="display: none">
+                        <label class="form-lab">用户名：</label>
+                        <span class="loginName" style="font-size:  16px;"></span>
+                    </div>
+                    <div class="form-control" id="editWrap" style="display: none">
+                        <label class="form-lab">用户名：</label>
+                        <a class="editUserName">设置用户名</a><span class="userNameTips" style="color: #999;">设置后用户名可以作为登录方式登录</span>
+                        <input id="loginName" maxlength="15" minlength="2" type="text" placeholder="" class="form-inp">
+                    </div>
+                    <div class="form-control">
+                        <label class="form-lab" style="line-height: 30px">性别：</label>
+                        <span id="sexText" style="font-size:  16px;"></span>
+                        <label class="radio-lab" style="display: none">
+                            <input class="sex" type="radio" name="sex" value="1">男
+                        </label>
+                        <label class="radio-lab" style="display: none">
+                            <input class="sex" type="radio" name="sex" value="2">女
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-wrap">
+                <button class="btn" id="edit">保存</button>
+            </div>
+        </div>
+
+        <div class="methods-block">
+            <ul class="methods-list fix">
+                <li class="item">
+                    <div href="../user/setting/bindMobile.html" class="wrap">
+                        <span class="icon phone"></span>
+                        <p class="info mobile-item">
+                            <span class="text-tit">绑定手机</span>
+                            <span class="text-info">让您的账户更安全</span>
+                            <span class="text-tips">您尚未绑定手机号码</span>
+                            <a class="methods-btn" href="./setting/bindMobile.html">绑定</a>
+                        </p>
+                    </div>
+                </li>
+                <li class="item">
+                    <div href="../user/setting/bindMobile.html" class="wrap">
+                        <span class="icon lock"></span>
+                        <p class="info">
+                            <span class="text-tit">登录密码</span>
+                            <span class="text-info">可绑定手机号找回密码</span>
+                            <span class="text-tips">&nbsp;</span>
+                            <a class="methods-btn" href="./setting/changePassword.html">修改密码</a>
+                            <!--<a class="methods-btn" href="./setting/forgetPassword.html">忘记密码</a>-->
+                        </p>
+                    </div>
+                </li>
+                <li class="item">
+                    <div href="../user/setting/bindMobile.html" class="wrap">
+                        <span class="icon shield"></span>
+                        <p class="info payPassword-item">
+                            <span class="text-tit">支付密码</span>
+                            <span class="text-info">可绑定手机号找回密码</span>
+                            <span class="text-tips">&nbsp;</span>
+                            <a class="methods-btn" href="./setting/payPassword.html">--</a>
+                            <!--<a class="methods-btn">忘记密码</a>-->
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <%= require('html-loader!./meta.html') %>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+<%= require('html-loader!./components/header.html') %>
+<div class="container">
+    <h1 class="title">意见反馈</h1>
+    <p class="tips">*请在下面填写您遇到的问题或意见建议，并留下您的联系方式，我们将为您提供更好的产品和服务。</p>
+    <p class="lab">意见描述：</p>
+    <div class="form-control">
+        <textarea name="" id="content" cols="30" rows="10" data-valid="require"></textarea>
+        <span class="hint-err"></span>
+    </div>
+    <p class="lab">联系方式：</p>
+    <div class="form-control">
+        <input type="text" id="contactWay" data-valid="require">
+        <span class="hint-err"></span>
+    </div>
+
+    <p class="lab">截图：<span class="lab-small">（支持 jpg，jpeg，png，gif等图片格式，图片小于2MB）</span></p>
+    <div class="form-control fix" style="text-align: left">
+        <label class="upload">
+            <i class="add"></i>
+            <input type="file" id="add_img" name="files">
+        </label>
+        <ul class="img-list fix">
+
+        </ul>
+    </div>
+    <div class="form-control">
+        <button class="btn" id="ideaSubmit">提交</button>
+    </div>
+</div>
+</body>
+</html>

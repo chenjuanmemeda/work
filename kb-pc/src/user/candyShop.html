@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <%= require('html-loader!../meta.html') %>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+<%= require('html-loader!../components/header.html') %>
+
+<div class="container fix">
+    <%= require('html-loader!./leftContainer.html') %>
+    <div class="right-container">
+        <div class="goods-wrap">
+            <p class="tit">糖果商城</p>
+            <ul class="goods-list fix"></ul>
+            <div class="no-info"></div>
+        </div>
+    </div>
+</div>
+<div id="mask">
+    <div id="maskWrap"></div>
+    <div class="modal-wrap" id="goodsDetail">
+        <div class="modal-header not-border fix"><a class="close-mask"></a></div>
+        <div class="modal-body">
+            <div class="candy-modal-bg">
+                <b class="candy-detail">
+                    <span class="count">-</span>
+                    <span class="other">天VIP</span>
+                </b>
+            </div>
+            <p class="goods-name">快币VIP10天卡</p>
+            <p class="need-candy">3000糖果</p>
+            <div class="goods-statement">
+                <p class="lab">礼品说明</p>
+                <p class="info">可兑换10天快币VIP，享受更便捷上网服务，兑换后立即生效，兑换所需的糖果会根据运营情况而调整。</p>
+            </div>
+            <button id="convert" class="btn">立即兑换</button>
+        </div>
+    </div>
+
+    <div class="modal-wrap" id="successModal">
+        <div class="modal-header not-border fix"><a class="close-mask"></a></div>
+        <div class="modal-body">
+            <div class="modal-body">
+                <div class="success-icon"></div>
+                <p class="text">恭喜你</p>
+                <p class="detail">开通快币VIP30天</p>
+                <button class="btn close-mask">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

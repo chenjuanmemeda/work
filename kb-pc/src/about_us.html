@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!--<script>window.location.href = 'http://www.kuaibi888.org'</script>-->
+    <meta charset="UTF-8">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+<img class="welcome" src="${require('./img/welcome.jpg')}" alt="">
+<div class="bg"></div>
+<div class="float-sign" id="login-wrap">
+    <p class="tit-logo"></p>
+    <div class="form-control">
+        <i class="icon mb"></i>
+        <input type="text" placeholder="请输入手机号/用户名" id="float_mobile">
+    </div>
+    <div class="form-control">
+        <i class="icon pwd"></i>
+        <input type="password" placeholder="请输入密码" id="float_password">
+    </div>
+    <div class="form-control">
+        <button class="btn" id="sign">登录</button>
+    </div>
+</div>
+</body>
+</html>

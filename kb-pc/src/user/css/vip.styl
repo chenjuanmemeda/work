@@ -1,0 +1,281 @@
+@import "./user.styl"
+
+.vip-wrap
+  .tit
+    margin 30px 0 45px
+    color: #c29949
+    text-align: center
+    font-size: 24px
+  .recharge-wrap
+    .ul-tit
+      text-align left
+      color: #000
+      font-size: 20px
+      font-weight: bold
+      vertical-align: middle
+      .crown
+        display inline-block
+        width 60px
+        height 39px
+        margin 0 10px 10px 50px
+        -webkit-background-size: 100%
+        background-size: 100%
+        vertical-align: middle
+        background-image: url(../../img/crown.png)
+      span
+        font-size: 20px
+        font-weight: normal
+    .recharge-item-list
+      font-size: 0
+      padding: 20px 0
+      .item
+        float: left
+        width 160px
+        height 190px
+        font-size: 14px
+        text-align: center
+        border: 2px solid #f5f5f5
+        border-radius 5px
+        margin 0 10px 20px
+        cursor: pointer
+        &.gotocandy
+          background-color: #c29949
+          border-color #c29949
+        .goto-candychop
+          display block
+          padding 35px 0
+          .icon
+            display block
+            width 66px
+            height 45px
+            margin 0 auto 10px
+            background-image: url(../../img/crown.png)
+          .text
+            font-size: 24px
+            color: #fff
+            font-weight: bold
+        .head
+          font-size: 28px
+          margin 35px 0
+          color: red
+        .body
+          margin 5px 0 8px
+          font-size: 20px
+        &.active
+          border-color #EDC95A
+
+.vip-desc
+  .vip-tit
+    text-align left
+    color: #000
+    font-size: 20px
+    font-weight: bold
+    margin 100px 0 30px
+  .desc-list
+    font-size: 0
+    .item
+      float: left
+      width 200px
+      padding 10px 0 30px
+      margin-right 20px
+      text-align center
+      border: 1px solid #eee
+      .icon
+        margin 0 auto
+        width 80px
+        height 80px
+        &.icon-1
+          background-image: url(../../img/desc-icon-1.png)
+        &.icon-2
+          background-image: url(../../img/desc-icon-2.png)
+        &.icon-3
+          background-image: url(../../img/desc-icon-3.png)
+        &.icon-4
+          background-image: url(../../img/desc-icon-4.png)
+      .strong
+        font-size: 18px
+        margin-bottom 5px
+        font-weight: bold
+      &:last-child
+        margin-right 0
+
+.pay-type
+  display inline-block
+  margin 0 0 0 30px
+  .lab
+    display block
+    font-size: 16px
+    margin 20px 0
+  label
+    display inline-block
+    vertical-align: middle
+    width 152px
+    padding 8px 0
+    text-align center
+    margin-right 35px
+    &.pay
+      border 2px solid #ccc
+      line-height 32px
+      cursor pointer
+      i
+        display inline-block
+        height 33px
+        margin-right 6px
+        vertical-align: middle
+        background-repeat: no-repeat
+        -webkit-background-size: 100%
+        background-size: 100%
+        &.wechat
+          width 39px
+          background-image: url(../../img/wechat.png)
+        &.alipay
+          width 32px
+          background-image: url(../../img/alipay.png)
+        &.account
+          width 32px
+          background-image: url(../../img/account.png)
+    &.active
+      border-color #EDC95A
+
+    &:last-child
+      margin-right 0
+
+#paySubmit
+  margin-left 90px
+  padding 8px 30px
+  font-size: 18px
+  border-radius 99px
+  background-color: #8cc152
+  font-weight: bold
+
+#rechargeSuccess
+  .modal-body
+    padding 20px
+    .success-icon
+      margin 0 auto
+      width 177px
+      height 177px
+      background-image: url(../../img/success.png)
+    .text
+      margin 25px 0 15px
+      color: #c29949
+      font-size: 24px
+    .detail
+      margin-bottom 5px
+      font-size: 18px
+    .date
+      margin-bottom 40px
+      color: #999
+    .close-mask
+      padding 8px 35px
+      font-size: 18px
+      border-radius 99px
+      background-color: #8cc152
+      font-weight: bold
+      color: #fff
+      margin-bottom 30px
+
+#settingPassword
+  .modal-body
+    .warning-icon
+      display inline-block
+      margin-right 10px
+      width 52px
+      height 52px
+      background-image: url(../../img/warning.png)
+      vertical-align: middle
+      line-height 230px
+    .info
+      display inline-block
+      font-size: 24px
+      vertical-align: middle
+      line-height 230px
+  .modal-footer
+    border-top 1px solid #eee
+    padding 50px
+    .btn
+      padding 8px 30px
+      border-radius 99px
+      font-size: 18px
+      &.cannel
+        background-color: #fff
+        color: #8cc152
+        border: 2px solid #8cc152
+      &.ok
+        background-color: #8cc152
+        border: 2px solid #8cc152
+
+#payPasswordInp
+  display none
+  .modal-body
+    .modal-tit
+      padding-bottom 18px
+      font-size: 24px
+      border-bottom 1px solid #eee
+    .pay-amount
+      color: red
+      margin 55px 0 20px
+      font-size: 42px
+    #payPassword
+      display block
+      margin 0 auto
+      line-height 60px
+      padding 0 25px
+      font-size: 16px
+      width 400px
+      border-radius 5px
+      border 1px solid #eeeeee
+    .forget-password
+      display block
+      margin 0 auto
+      width 450px
+      margin-top 5px
+      margin-bottom 100px
+      text-align right
+      color: #c29949
+      font-size 18px
+    #confirmPayPassword
+      background-color: #8cc152
+      border-radius 99px
+      font-size: 24px
+      padding 5px 40px
+      margin-bottom 40px
+
+#successModal
+  .modal-body
+    padding 20px
+    .success-icon
+      margin 0 auto
+      width 177px
+      height 177px
+      background-image: url(../../img/success.png)
+    .text
+      margin 25px 0 15px
+      color: #c29949
+      font-size: 24px
+    .detail
+      margin-top 30px
+      margin-bottom 50px
+      font-size: 24px
+      font-weight: bold
+      .red
+        margin-left 10px
+        color: red
+        font-size: 24px
+    .date
+      margin-bottom 40px
+      color: #999
+    .close-mask
+      padding 8px 35px
+      font-size: 18px
+      border-radius 99px
+      background-color: #8cc152
+      font-weight: bold
+      color: #fff
+      margin-bottom 20px
+
+
+
+
+
+

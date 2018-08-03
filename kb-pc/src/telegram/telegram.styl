@@ -1,0 +1,184 @@
+@import "../common/mixin.styl";
+
+.search-wrap
+  margin 15px 0
+  .type-list
+    float: left
+    font-size: 0
+    .type
+      display inline-block
+      line-height 54px
+      font-size: 16px
+      padding-right 40px
+      cursor pointer
+      &.active
+        color: #edc95a
+  .search-bar
+    float: right
+    input
+      padding 17px 20px 16px 15px
+      border: 1px solid #eee
+      border-radius 4px
+      width 230px
+      vertical-align: top
+      outline none
+    #search
+      border-radius 4px
+      border 0
+      margin-left: -10px
+      width 102px
+      height 54px
+      background-color: #8cc152
+      vertical-align: top
+      cursor pointer
+      background-image: url(../img/telegram-search.png)
+
+.telegram-list-wrap
+  min-height 400px
+  margin-bottom: 80px
+  .loading, .not-info
+    text-align center
+    line-height 400px
+    font-size: 24px
+  .list
+    font-size: 0
+    .item
+      width 255px
+      display inline-block
+      padding 15px
+      vertical-align: top
+      background-color: #f9f8f6
+      border-radius 4px
+      margin 8px
+      transition box-shadow 0.3s
+      cursor pointer
+      &:hover
+        box-shadow 0 2px 8px rgba(155, 155, 155, .5)
+      .left-content
+        float: left
+        .name
+          display block
+          width 190px
+          margin-bottom: 5px
+          font-size: 14px
+        .link
+          display block
+          width 190px
+          text-decoration underline
+          color: #66a4f9
+          font-size: 14px
+      .icon
+        display block
+        float: right
+        width 50px
+        height 50px
+        background-image: url(../img/telegram-logo.png)
+
+.more
+  display block
+  width 100%
+  font-size: 16px
+  padding 60px 0
+  text-align center
+
+#mask
+  position: fixed
+  top: 0
+  left: 0
+  right 0
+  buttom 0
+  width 100%
+  height 100%
+  display: none
+  background-color: rgba(0, 0, 0, .5)
+  overflow-x hidden
+  overflow-y auto
+  .modal-wrap
+    display none
+    position: relative
+    margin 80px auto
+    width: 660px
+    background-color: #fff
+    border-radius: 4px
+    text-align: center
+    .modal-header
+      padding 10px 20px
+      font-size: 18px
+      color: #000
+      text-align left
+      border-bottom 1px solid #e6e6e6
+      &.not-border
+        border-bottom 0
+      .close-mask
+        display block
+        float: right
+        margin-top 5px
+        width 18px
+        height 18px
+        color: #000
+        cursor pointer
+        background-repeat: no-repeat
+        background-image: url(../img/close.png)
+      .head-router
+        font-size: 18px
+        margin 0 20px
+        line-height 20px
+        font-weight: bold
+        cursor pointer
+        &.active
+          color: #EDC95A
+
+#telegramModal
+  margin-top 120px !important
+  .modal-body
+    padding 0 30px
+    .tips
+      margin 0 0 20px
+      font-size: 24px
+      font-size: 16px
+      text-align left
+    .form-control
+      position relative
+      margin-bottom 30px
+      text-align center
+      .tit
+        text-align left
+        margin 5px 0 10px
+        font-size 16px
+      input, textarea
+        border-radius 4px
+        border: 1px solid #dddddd
+        background-color: #fff
+        padding: 10px
+        width 100%
+        font-size: 14px
+        line-height 20px
+        box-sizing border-box
+        outline: none
+        &.err
+          border-color red
+      .hint-err
+        position absolute
+        bottom -18px
+        right 0
+        border-radius 4px
+        font-size: 12px
+        padding 0
+        text-align right
+        color: #D00000
+  .btn-wrap
+    padding-bottom: 35px
+    .btn
+      padding 5px 45px
+      font-size: 24px
+      border-radius 99px
+      border: 2px solid #c8a858
+      margin 0 20px
+      cursor pointer
+      outline none
+      &.cannel
+        color: #c8a858
+        background-color: #fff
+      &#sumbitproject
+        color: #fff
+        background-color: #c8a858

@@ -1,0 +1,74 @@
+html,
+body,
+div,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+ul,
+li,
+ol {
+  list-style: none;
+}
+.container {
+  width: 1200px;
+  margin: 150px auto;
+}
+.container .navigate {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .navigate .item {
+  position: relative;
+  flex: 0 0 23%;
+  margin: 1%;
+  background-color: #ffae05;
+  border-radius: 10px;
+  font-size: 14px;
+  height: 160px;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+.container .navigate .item .bar {
+  position: absolute;
+  bottom: -60px;
+  width: 100%;
+  background-color: #000;
+  text-align: center;
+  color: #fff;
+  line-height: 35px;
+  transition: bottom 0.5s ease;
+}
+.container .navigate .itemhover .bar {
+  bottom: 15px;
+}
+#mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+#mask #maskWrap {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+#mask .form-wrap {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 500px;
+  background-color: #fff;
+  border-radius: 10px;
+  height: 500px;
+  text-align: center;
+}
+#mask .form-wrap .inp-wrap {
+  margin: 20px;
+}

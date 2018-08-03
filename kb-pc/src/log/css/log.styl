@@ -1,0 +1,260 @@
+@import "../../common/mixin.styl"
+
+.log-container
+  position relative
+  width 1680px
+  padding 35px 45px 35px 45px
+  margin 50px auto
+  box-shadow 0 5px 15px #FDF5E9
+  border-radius 5px
+  box-sizing border-box
+  background-color: #fff
+  animation fadeUp 0.5s ease
+
+.logo
+  position absolute
+  left 25px
+  top 25px
+  display block
+  z-index 999
+  .icon
+    display inline-block
+    margin-right 10px
+    width 50px
+    height 50px
+    -webkit-background-size: 100%
+    background-size: 100%
+    background-image: url(../../img/logo.png)
+    vertical-align: middle
+  .text
+    display inline-block
+    font-size: 24px
+    color: #c29949
+    vertical-align: middle
+    span
+      font-size: 16px
+
+.form-wrap
+  position relative
+  float: left
+  width 800px
+  margin 0 auto
+  height 755px
+  text-align center
+  .form-control
+    position relative
+    width 460px
+    margin 0 auto 30px
+    input, select
+      border-radius 999px
+      border: 1px solid #dddddd
+      background-color: #fff
+      padding: 20px 10px 20px 85px
+      width 440px
+      font-size: 16px
+      line-height 20px
+      box-sizing border-box
+      outline: none
+      &:focus
+        border-color #c8a858
+      &.err
+        border-color red
+    .hint-err
+      color: red
+      font-size: 14px
+      text-align right
+    .submit
+      border-radius 999px
+      border: 1px solid #EDC95A
+      background-color: #EDC95A
+      color: #fff
+      width 460px
+      padding 12px 0
+      font-size: 26px
+      box-sizing border-box
+      cursor pointer
+      outline: none
+    .getvCode-btn
+      position absolute
+      top 9px
+      right 22px
+      padding 10px 15px
+      width 125px
+      background-color: #edc95a
+      color: #fff
+      border: 0
+      font-size: 18px
+      border-radius 999px
+      outline none
+      cursor pointer
+      &:disabled
+        opacity: 0.5
+        cursor not-allowed
+    .forgetpassword
+      float: right
+      text-align right
+      margin-right 15px
+      margin-bottom 90px
+    .inp-icon
+      position absolute
+      top 3px
+      left 25px
+      display block
+      width 55px
+      height 55px
+      &.phone
+        background-image: url(../../img/icon-phone.png)
+      &.lock
+        background-image: url(../../img/icon-lock.png)
+      &.cap
+        background-image: url(../../img/cap.png)
+      &.vCode
+        background-image: url(../../img/msg.png)
+      &.invite
+        background-image: url(../../img/invite.png)
+    .icon-err
+      display none
+      position absolute
+      top 3px
+      right -50px
+      width 55px
+      height 55px
+      background-image: url(../../img/icon-err.png)
+  .bottom-text
+    position absolute
+    bottom 0
+    width 100%
+    text-align center
+    font-size: 13px
+    color: #999
+
+.img-wrap
+  width 765px
+  float: right
+  background-color: #f6f6f6
+  border-radius 10px
+  height 755px
+  background-image: url(../../img/img-wrap.png)
+
+.left-round
+  width 288px
+  height 234px
+  position absolute
+  top 0
+  left 0
+  z-index -1
+  background-image: url(../../img/left-round.png)
+
+.left-item
+  width 113px
+  height 75px
+  position absolute
+  top 2%
+  left 13%
+  z-index -1
+  background-image: url(../../img/log-left.png)
+
+.right-round
+  width 337px
+  height 335px
+  position absolute
+  bottom 0
+  right: 0
+  z-index -1
+  background-image: url(../../img/right-round.png)
+
+.other
+  width 80px
+  height 75px
+  position absolute
+  right 40px
+  top 0
+  background-image: url(../../img/other.png)
+
+#captchCodeImg
+  position absolute
+  top 8px
+  right 30px
+  padding 0
+  margin 0
+  background-color: #fff
+  color: #333
+  z-index 9999
+  .captchCode-img
+    position relative
+    z-index -1
+    vertical-align: middle
+
+@keyframes fadeUp
+  from {
+    opacity 0.5
+    margin-top 40px
+  }
+  to {
+    opacity 1
+    margin-top 50px
+  }
+
+@media only screen and (min-width: 1441px) and (max-width: 1680px)
+  .log-container
+    width 1440px
+    .form-wrap
+      width 550px
+
+@media only screen and (min-width: 1367px) and (max-width: 1440px)
+  .log-container
+    width 1366px
+    .form-wrap
+      width 500px
+
+@media only screen and (max-width: 1366px)
+
+  .log-container
+    width 1200px
+    margin 25px auto
+    padding 80px 35px 40px
+    animation none
+    .form-wrap
+      width 500px
+      height 570px
+      .link-wrap
+        margin 0 auto 20px
+        width 400px
+        .link
+          padding 6px 0
+          font-size: 18px
+      .form-control
+        margin-bottom 25px
+        input
+          padding 15px 10px 15px 85px
+          font-size: 14px
+        .inp-icon
+          width 45px
+          height 45px
+          -webkit-background-size: 100%
+          background-size: 100%
+        .getvCode-btn
+          font-size: 14px
+          padding 7px 14px
+        .submit
+          padding 10px
+          font-size: 16px
+        .forgetpassword
+          margin-bottom 40px
+        .hint-err
+          font-size: 12px
+      .bottom-text
+        font-size: 12px
+        bottom -20px
+    .img-wrap
+      width 590px
+      height 570px
+      -webkit-background-size: 100%
+      background-size: 100%
+
+  #captchCodeImg
+    top 4px
+    right 33px
+    font-size: 0
+
+

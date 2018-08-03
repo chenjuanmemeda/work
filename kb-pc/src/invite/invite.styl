@@ -1,0 +1,399 @@
+@import "../common/mixin.styl";
+body 
+    background-image: url(../img/invite-act/bg2.png)
+.image
+    height 350px
+    width 1520px
+    background: url(../img/invite-act/header-bg.png)
+    margin 10px auto 0
+    background-size: 90%
+    background-repeat: no-repeat
+.container
+    .draw-wrap
+        .rotary
+            display: flex
+            .rotary-table
+                flex 30%
+                .tit
+                    color: #ffffff
+                    text-align: center
+                    font-size: 18px
+                    letter-spacing: 1.5
+                    margin-bottom: 143px
+                    padding-top 100px
+                    .num
+                        color red
+                        font-size:  30px
+                        padding 0 5px
+                .draw-menu-list 
+                    overflow hidden
+                    margin 0 auto
+                    width: 350px
+                    li 
+                        text-align center
+                        font-size 18px
+                        padding-top 25px
+                        color #ffffff
+                    span 
+                        font-size 18px
+                        padding 5px
+                .wheel-wrap
+                    width: 100%
+                    height 752px
+                    margin-top 45px
+                    position relative
+                    background url(../img/invite-act/draw-bg.png) no-repeat center
+
+                    .wheel-pointer-box 
+                        position absolute
+                        top 43%
+                        left 50%
+                        z-index 100
+                        -webkit-transform translate(-50%, -50%)
+                        transform translate(-50%, -50%)
+                        width 150px
+                        height 160px
+                        .wheel-pointer 
+                            width 150px
+                            height 160px
+                            background url(../img/invite-act/draw-begin.png) no-repeat center top
+                            background-size 100%
+                            -webkit-transform-origin center 60%
+                            transform-origin center 60%
+                            cursor pointer
+                            z-index: 10
+                    .prize-list
+                        width 85%
+                        margin-left 5%
+                        height 100%
+                        position relative
+                        .prize-item
+                            position absolute
+                            &:first-child
+                                right 32.5%
+                                top 10%
+                                transform: rotate(20deg)
+                                -webkit-transform: rotate(20deg)
+                            &.prize2
+                                right 18%
+                                top 150px
+                                transform: rotate(50deg)
+                                -webkit-transform: rotate(50deg)
+                             &.prize3
+                                right 11%
+                                top 260px
+                                transform: rotate(90deg)
+                                -webkit-transform: rotate(90deg)
+                            &.prize4
+                                right 18%
+                                top 370px
+                                transform: rotate(120deg)
+                                -webkit-transform: rotate(120deg)
+                            &.prize5
+                                right 31%
+                                top 450px
+                                transform: rotate(160deg)
+                                -webkit-transform: rotate(160deg)
+                            &.prize6
+                                right 49%
+                                top 450px
+                                transform: rotate(190deg)
+                                -webkit-transform: rotate(190deg)
+                            &.prize7
+                                right 60%
+                                top 380px
+                                transform: rotate(230deg)
+                                -webkit-transform: rotate(230deg)
+                            &.prize8
+                                right 73%
+                                top 265px
+                                transform: rotate(260deg)
+                                -webkit-transform: rotate(260deg)
+                             &.prize9
+                                left 15%
+                                top 130px
+                                transform: rotate(305deg)
+                                -webkit-transform: rotate(305deg)
+                             &.prize10
+                                left 35%
+                                top 60px
+                                transform: rotate(340deg)
+                                -webkit-transform: rotate(340deg)
+                            .prize-pic
+                                img
+                                    height 70px
+                                    width 70px
+                                    margin 0 auto
+                                    display block
+                                        
+                            .prize-type
+                                font-size: 23.2px
+                                color: #ffe367
+                                padding 0 0 45px
+                                vertical-align: middle
+                                text-shadow: 5px 5px 5px #73000000
+                                font-weight: bold
+                                &.red
+                                    color: #cb0030
+
+                p
+                    text-align: center
+                    color: #ffffff
+                    font-size: 18px
+                    .draw-count
+                        color: red
+                        font-size: 30px
+                        padding 0 5px
+                .share
+                    width: 139px
+                    height: 65px
+                    line-height: 63px
+                    margin 43px auto 0
+                    display: block
+                    background-image: url(../img/invite-act/share-btn.png)
+                    background-position: center
+                    background-repeat: no-repeat
+                    text-align: center
+                    font-size: 24px
+                    color #333333
+                    cursor pointer
+
+            .rotary-list-wrap
+                flex 1
+                .router-list
+                    display flex
+                    margin 20px 0
+                    .item
+                        flex 1
+                        text-align: center
+                        color:  #ffffff
+                        font-size: 30px
+                        display block
+                        .icon 
+                            width 100% 
+                            height  200px
+                            margin 0 auto
+                            background-position: center
+                            background-repeat: no-repeat
+                            cursor pointer
+                            &.prize
+                                background-image: url(../img/invite-act/prize.png)
+                            &.invite
+                                background-image: url(../img/invite-act/invite-icon.png)
+                .rotary-ul-wrap
+                    padding 20px 10px 10px
+                    border-radius: 5px
+                    background-color: #431c66
+                    cursor pointer
+                    .title
+                        text-align: center
+                        font-size: 22px 
+                        color: #ffffff
+                        padding-bottom: 30px
+                    .rotary-list-tit
+                        .item
+                            display block
+                            text-align: left
+                            font-size: 16px
+                        span 
+                            color: #ffffff
+                            line-height:  48px
+                        .content
+                            display inline-block
+                            &.left
+                                width 64%
+                                height 48px
+                                text-align: center
+                            &.tit
+                                font-size: 14px
+                                color: #ffffff
+                    .rotary-list
+                        height 514px
+                        overflow-y scroll
+                        &::-webkit-scrollbar 
+                            width 10px
+                            height 4px
+                        &::-webkit-scrollbar-thumb 
+                            border-radius 5px
+                            height 4px
+                            -webkit-box-shadow inset 0 0 5px rgba(0,0,0,0.2)
+                            background #ffffff
+                        &::-webkit-scrollbar-track 
+                            -webkit-box-shadow inset 0 0 5px rgba(0,0,0,0.2)
+                            border-radius 0
+                            background rgba(0,0,0,0.1) 
+                        &:hover
+                            .rotary-ul-wrap 
+                                &::-webkit-scrollbar 
+                                    display block
+                        .item
+                            display block
+                            text-align: left
+                            font-size: 16px
+                            &.bigger
+                                font-size: 18px
+                            span 
+                                color: #ffffff
+                                line-height:  48px
+                            .content
+                                display inline-block
+                                background-position: center
+                                background-repeat:  no-repeat
+                                &.left
+                                    width 25%
+                                    height 58px
+                                    text-align: center
+                                    vertical-align: middle
+                                &.num0
+                                    background-image: url(../img/invite-act/num1.png)
+                                &.num1
+                                    background-image: url(../img/invite-act/num2.png)
+                                &.num2
+                                    background-image: url(../img/invite-act/num3.png)
+                                &.middle
+                                    width 45%
+                                &.right
+                                    color #ffffff
+                                    text-align: center
+                                &.tit
+                                    font-size: 14px
+                                    color: #ffffff
+                    
+                .invite-list-wrap
+                    margin-top 50px
+                    background-color: #431c66
+                    cursor pointer
+                    padding 10px
+                    .title
+                        text-align: center
+                        font-size: 22px 
+                        color: #ffffff
+                        padding-bottom: 30px
+                     .prize-list
+                        font-size: 0
+                        padding 0 30px
+                        .item
+                            margin 0 10px 20px 0
+                            display inline-block
+                            width: 80%
+                            span 
+                                display: inline-block
+                            .left
+                                width 50px
+                                height 50px 
+                                margin-right 10px
+                                vertical-align: middle
+                                background-position: center
+                                background-repeat:  no-repeat
+                                &.num0
+                                    background-image: url(../img/invite-act/num1.png)
+                                &.num1
+                                    background-image: url(../img/invite-act/num2.png)
+                                &.num2
+                                    background-image: url(../img/invite-act/num3.png)
+                                &.num
+                                    border-radius: 50px
+                                    border 1px solid #ffffff
+                                    text-align: center
+                                    color:  #ffffff
+                                    font-size: 16px
+                                    line-height: 50px
+                            .right
+                                vertical-align: middle
+                                p
+                                    color: #ffffff
+                                    font-size: 18px
+                                .money
+                                    font-size: 16px
+                                    color: #ffffff
+           
+        .rules-wrap
+            border 1px solid #55357f
+            margin-top 52px
+            margin-bottom: 50px
+            padding 23px 0
+            .rule-tit
+                padding-bottom:  23px 
+                text-align: center
+                font-size: 22px
+                color: #ffffff
+                letter-spacing: 1.5
+            .rule-con
+                font-size: 0
+                margin 0 auto
+                display block
+                padding-left 10%
+                li
+                    padding 5px
+                    font-size: 16px
+                    color: #ffffff
+                    span 
+                        padding-right 20px
+
+.cjdl-modal
+    z-index: 111
+    .modal-wrap
+        .modal-header
+            i 
+                width 20px
+                height 20px
+                color: #000
+                font-size: 20px
+        .modal-body
+            .gift-type
+                margin 30px auto
+                &.thankyou
+                    width 131px
+                    height 131px
+                    // background-image url(../img/draw/thankyou.png)
+                &.red-bar 
+                    margin 30px auto
+                    width 136px
+                    height 133px
+                    // background-image url(../img/draw/money.png)
+            .gift-tips 
+                margin 10px 0
+                text-align center
+                font-size 18px
+            .gift-btn 
+                color #fff
+                text-align center
+                background-color #b91117
+                border-radius 10px
+                -webkit-border-radius 10px
+                -moz-border-radius 10px
+                -ms-border-radius 10px
+                -o-border-radius 10px
+                box-shadow 0 0 10px 10px #d8d1d2
+                display block
+                cursor pointer
+                width: 205px;
+                height: 59px;
+                line-height: 59px;
+                font-size: 26px;
+                margin: 30px auto;
+        .share-platform
+            .share-platform-r
+                width 100%
+                margin 0 auto
+                .bdsharebuttonbox
+                    height 180px
+                    padding-top 40px
+                    zoom 1
+                    a 
+                        width 32.1%
+                        height 100px
+                        background-repeat no-repeat
+                        display inline-block
+                        background-position center
+                        &.bds_weixin 
+                            background-image url(../img/invite-act/share-wechat.png)
+                        &.bds_tsina
+                            background-image url(../img/invite-act/share-weibo.png)
+                        &.qqshare
+                            background-image url(../img/invite-act/share-qq.png)
+
+                            
+
+
+                

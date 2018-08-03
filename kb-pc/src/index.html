@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <%= require('html-loader!./meta.html') %>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+<!--<div class="float-wrap">-->
+<!--<i class="close-float"></i>-->
+<!--<a class="link" href="./log/sign.html"></a>-->
+<!--</div>-->
+
+<div id="initWrap"></div>
+
+<%= require('html-loader!./components/header.html') %>
+<div class="container">
+    <p class="time-deadline">您的VIP已到期，如需想用VIP特权请<a class="vipModalShow">前往充值</a>或<a class="invitationModal">邀请好友</a></p>
+    <h2 class="item-title fix"><i class="icon website"></i>优选交易所</h2>
+    <ul class="navigate fix">
+        <li class="item loginModal-show">
+            <a class="img binance">
+                <img src="${require('./img/nav/binance.png')}" alt="">
+            </a>
+        </li>
+        <li class="item loginModal-show">
+            <a class="img weex" style="background-color: #e7edfc;">
+                <img style="width: 100%" src="${require('./img/nav/weex.png')}" alt="">
+            </a>
+        </li>
+        <li class="item loginModal-show">
+            <a class="img huobi">
+                <img src="${require('./img/nav/huobi.png')}" alt="">
+            </a>
+        </li>
+        <li class="item loginModal-show">
+            <a class="img bitfinex">
+                <img src="${require('./img/nav/bitfinex.png')}" alt="">
+            </a>
+        </li>
+        <li class="item loginModal-show">
+            <a class="img zb">
+                <img src="${require('./img/nav/zb.png')}" alt="">
+            </a>
+        </li>
+        <li class="item loginModal-show">
+            <a class="img okex">
+                <img src="${require('./img/nav/okex.png')}" alt="">
+            </a>
+        </li>
+        <li class="item loginModal-show">
+            <a class="img gate">
+                <img src="${require('./img/nav/gate.png')}" alt="">
+            </a>
+        </li>
+        <li class="item loginModal-show">
+            <a class="img bibox" style="background-color: #D1F5FD;">
+                <img src="${require('./img/nav/bibox.png')}" alt="">
+            </a>
+        </li>
+        <li class="item loginModal-show">
+            <a class="img blockchain" style="background-color: #fef3de;">
+                <img style="width: 100%" src="${require('./img/nav/blockchain.png')}" alt="">
+            </a>
+        </li>
+        <li class="item loginModal-show">
+            <a class="img poloniex" style="background-color: #E9F9D8;">
+                <img style="width: 100%" src="${require('./img/nav/poloniex.png')}" alt="">
+            </a>
+        </li>
+    </ul>
+</div>
+<a class="float-ads" href="./log/sign.html"></a>
+<div class="container" style="position: relative;">
+    <div class="telegram" >
+        <h2 class="item-title fix"><i class="icon telegram"></i>电报群
+            <a href="./telegram.html" class="checkmore">
+                查看更多 >
+            </a>
+        </h2>
+        <div class="info-items" data-index="5"></div>
+        <div class="info-items" data-index="6"></div>
+        <div class="info-items" data-index="7"></div>
+    </div>
+    <div class="candyInfo-wrap">
+        <h2 class="item-title fix">
+            <i class="icon candy"></i>免费领糖果
+            <a href="./candy_news.html" class="checkmore">查看更多 ></a>
+        </h2>
+        <ul class="candyInfo-list fix">
+    
+        </ul>
+    </div>
+    <div class="right">
+
+    </div>
+</div>
+
+
+
+
+
+
+<div class="container information">
+    <h2 class="item-title fix"><i class="icon deal"></i>其它交易平台</h2>
+    <div class="info-items recommend">
+        <!--<h1 class="tit">推荐</h1>-->
+    </div>
+    <div class="info-items best">
+        <!--<h1 class="tit">优选</h1>-->
+    </div>
+    <div class="info-items hot">
+        <!--<h1 class="tit">最热</h1>-->
+        <!--<a class="link" href="">AICOIN</a>-->
+    </div>
+</div>
+<!--<iframe src="" frameborder="0" id="iframe"></iframe>-->
+<div class="cjdl-modal" data-name="prize">
+    <div class="modal-wrap">
+        <div class="modal-body">
+            <div class="space"></div>
+            <a class="detail-btn" href="./invite.html" >查看详情</a>
+        </div>
+    </div>
+    <p class="close"></p>
+</div>
+
+</body>
+</html>

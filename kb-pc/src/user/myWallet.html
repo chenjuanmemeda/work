@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <%= require('html-loader!../meta.html') %>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+<%= require('html-loader!../components/header.html') %>
+
+<div class="container">
+    <%= require('html-loader!./leftContainer.html') %>
+    <div class="right-container">
+        <div class="myWallet-wrap">
+            <p class="tit">我的钱包</p>
+            <div class="info-wrap fix">
+                <div class="item">
+                    <p class="lab">钱包总额</p>
+                    <p class="num user-amount">--</p>
+                    <button class="btn" id="withdrawShow">提现</button>
+                </div>
+                <div class="item">
+                    <p class="lab">提现方式</p>
+                    <p class="num bankcard-count">--</p>
+                    <button class="btn" id="bankCardListShow">管理</button>
+                </div>
+            </div>
+            <div class="myWallet-log">
+                <p class="log-tit">交易明细</p>
+                <table class="log-table bunsiness-table">
+                    <thead>
+                    <tr>
+                        <th>操作</th>
+                        <th>交易时间</th>
+                        <th>交易类型</th>
+                        <th width="100">金额</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <div class="no-info" style="display: none;line-height: 240px">暂无信息</div>
+                <ul id="pagination"></ul>
+            </div>
+        </div>
+
+        <div class="withdraw-wrap">
+            <p class="tit">我的钱包</p>
+            <p class="log-tit">提现</p>
+            <div class="form-wrap">
+                <div class="form-control">
+                    <label class="form-lab">选择提现银行卡：</label>
+                    <select name="" id="withdrawList" class="form-select">
+                    </select>
+                </div>
+                <div class="form-control">
+                    <label class="form-lab">提现金额：</label>
+                    <input id="withdrawAmount" type="text" placeholder="请输入提现金额" class="form-inp">
+                </div>
+                <div class="form-control">
+                    <label class="form-lab">支付密码：</label>
+                    <input id="payPassword" autocomplete="new-password" type="password" maxlength="6" placeholder="请输入提现密码" class="form-inp">
+                </div>
+                <div class="form-control">
+                    <label class="form-lab">&nbsp;</label>
+                    <button class="btn" id="withdrawSubmit">确认提交</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bankCardList-wrap">
+            <p class="tit">我的钱包</p>
+            <p class="log-tit">提现方式</p>
+            <div class="form-wrap">
+                <div class="form-control">
+                    <label class="form-lab">提现类型：</label>
+                    <select name="" id="payType" class="form-select">
+                        <option value="">请选择提现类型</option>
+                        <option value="1">支付宝</option>
+                        <option value="2">银行卡</option>
+                    </select>
+                </div>
+                <div class="form-control">
+                    <label class="form-lab">收款人姓名：</label>
+                    <input id="bankCardName" type="text" placeholder="请输入收款人真实姓名" class="form-inp">
+                </div>
+                <div class="form-control">
+                    <label class="form-lab">支付宝/银行卡卡号：</label>
+                    <input id="bankCardNumber" type="text" placeholder="请输入收款账号" class="form-inp">
+                </div>
+                <div class="form-control" id="bankName-wrap" style="display: none">
+                    <label class="form-lab">开户行名称：</label>
+                    <input id="bankName" type="text" placeholder="请输入开户行名称" class="form-inp">
+                </div>
+                <div class="form-control">
+                    <label class="form-lab">&nbsp;</label>
+                    <button class="btn" id="saveBank">保存</button>
+                </div>
+            </div>
+            <div class="bankCard-list">
+                <div class="log-tit">提现方式管理</div>
+                <table class="log-table bankcard-list">
+                    <thead>
+                    <tr>
+                        <th>提现类型</th>
+                        <th>收款账号</th>
+                        <th>收款人</th>
+                        <th width="100">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="mask">
+    <div id="maskWrap"></div>
+    <div class="modal-wrap successModal" id="successModal">
+        <div class="modal-header not-border fix"><a class="close-mask"></a></div>
+        <div class="modal-body">
+            <div class="success-icon"></div>
+            <p class="text">申请提现成功</p>
+            <p class="detail">客服会在一个工作日内完成打款</p>
+            <a href="../user/setting.html" class="btn close-mask">确定</a>
+        </div>
+    </div>
+    <div class="modal-wrap successModal" id="saveRechargeModal">
+        <div class="modal-header not-border fix"><a class="close-mask"></a></div>
+        <div class="modal-body">
+            <div class="success-icon"></div>
+            <p class="text">保存成功！</p>
+            <a class="btn close-mask">确定</a>
+        </div>
+    </div>
+    <!-- 设置支付密码 -->
+    <div class="modal-wrap warningModal" id="settingPassword">
+        <div class="modal-header not-border fix"><a class="close-mask"></a></div>
+        <div class="modal-body">
+            <div class="warning-icon"></div>
+            <p class="info">您还没有设置支付密码，请前往设置</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn close-mask cannel">取消</button>
+            <a href="./setting/payPassword.html" class="btn close-mask ok" style="display: inline-block">确定</a>
+        </div>
+    </div>
+
+    <!-- 设置支付密码 -->
+    <div class="modal-wrap warningModal" id="noBankCard">
+        <div class="modal-header not-border fix"><a class="close-mask"></a></div>
+        <div class="modal-body">
+            <div class="warning-icon"></div>
+            <p class="info">您还没有提现方式，请前往设置</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn close-mask cannel">取消</button>
+            <a href="./myWallet.html?type=bankCardList" class="btn close-mask ok" style="display: inline-block">确定</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

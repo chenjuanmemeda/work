@@ -1,0 +1,235 @@
+@import "./user.styl"
+
+.tit
+  margin 30px 0 20px
+  color: #c29949
+  text-align: center
+  font-size: 24px
+
+.log-tit
+  text-align left
+  margin-bottom 30px
+  font-size: 20px
+  font-weight: bold
+
+.myWallet-wrap
+  padding 0 30px
+  margin-bottom 60px
+  .info-wrap
+    width 100%
+    margin 0 auto
+    .item
+      float: left
+      margin-right 50px
+      padding 30px 0 40px
+      text-align center
+      width 390px
+      background-color: #f2f2f2
+      .lab
+        font-size: 18px
+      .num
+        margin 40px 0 70px
+        color: red
+        font-size: 48px
+      .btn
+        padding 5px 30px
+        font-size: 28px
+        border-radius 99px
+      &:last-child
+        margin-right 0
+  .myWallet-log
+    margin-top 62px
+    .log-table
+      width 100%
+      box-sizing content-box
+      thead
+        background-color: #f2f2f2
+        border 1px solid #f2f2f2
+        tr th
+          padding 20px 30px
+          font-size: 16px
+          text-align left
+      tbody
+        tr
+          border 1px solid #f2f2f2
+          td
+            padding 30px
+            font-size: 16px
+
+.bankCardList-wrap
+  display none
+  .form-wrap
+    .form-control
+      margin-bottom 45px
+      .form-lab
+        display inline-block
+        width 185px
+        font-size: 16px
+        line-height 60px
+        text-align right
+      .form-inp, .form-select
+        border-radius 5px
+        padding 20px 25px
+        font-size: 15px
+        border: 1px solid #c29949
+        width 440px
+        box-sizing border-box
+      .btn
+        background-color: #8cc152
+        padding 10px 40px
+        font-size: 20px
+        border-radius 99px
+        font-weight: bold
+  .bankCard-list
+    .log-table
+      width 100%
+      box-sizing content-box
+      thead
+        background-color: #f2f2f2
+        border 1px solid #f2f2f2
+        tr th
+          padding 20px 30px
+          font-size: 16px
+          text-align left
+      tbody
+        tr
+          border 1px solid #f2f2f2
+          td
+            padding 30px
+            font-size: 16px
+            .remove-bankcard
+              display block
+              cursor pointer
+              color: #c29949
+
+.withdraw-wrap
+  display none
+  .form-wrap
+    .form-control
+      margin-bottom 45px
+      .form-lab
+        display inline-block
+        width 185px
+        font-size: 16px
+        line-height 60px
+        text-align right
+      .form-inp, .form-select
+        border-radius 5px
+        padding 20px 25px
+        font-size: 15px
+        border: 1px solid #c29949
+        width 440px
+        box-sizing border-box
+      .btn
+        background-color: #8cc152
+        padding 10px 40px
+        font-size: 20px
+        border-radius 99px
+        font-weight: bold
+  .bankCard-list
+    .log-table
+      width 820px
+      box-sizing content-box
+      thead
+        background-color: #f2f2f2
+        border 1px solid #f2f2f2
+        tr th
+          padding 20px 30px
+          font-size: 16px
+          text-align left
+      tbody
+        tr
+          border 1px solid #f2f2f2
+          td
+            padding 30px
+            font-size: 16px
+            .remove-bankcard
+              display block
+              cursor pointer
+              color: #c29949
+
+.successModal
+  .modal-body
+    padding 20px
+    .success-icon
+      margin 0 auto
+      width 177px
+      height 177px
+      background-image: url(../../img/success.png)
+    .text
+      margin 25px 0 20px
+      color: #333
+      font-size: 24px
+    .detail
+      margin-bottom 25px
+      font-size: 18px
+    .close-mask
+      display block
+      width 100px
+      margin 0 auto
+      padding 8px 35px
+      font-size: 18px
+      border-radius 99px
+      background-color: #8cc152
+      font-weight: bold
+      color: #fff
+      margin-bottom 20px
+
+#pagination
+  font-size: 0
+  text-align right
+  margin-top 10px
+  height 30px
+  li
+    display inline-block
+    &.active
+      border-color red !important
+      color: #fff
+  .page
+    margin-right 10px
+    border-radius 3px
+    border: 1px solid #aaaaaa
+    a
+      display block
+      font-size: 12px
+      padding 3px 7px
+      line-height 14px
+      cursor pointer
+    &:hover
+      border-color #8cc152
+      background-color: #8cc152
+    &:hover a
+      color: #fff
+  .totalCount
+    padding 4px 5px
+    font-size: 12px
+
+.warningModal
+  .modal-body
+    .warning-icon
+      display inline-block
+      margin-right 10px
+      width 52px
+      height 52px
+      background-image: url(../../img/warning.png)
+      vertical-align: middle
+      line-height 230px
+    .info
+      display inline-block
+      font-size: 24px
+      vertical-align: middle
+      line-height 230px
+  .modal-footer
+    border-top 1px solid #eee
+    padding 50px
+    .btn
+      padding 8px 30px
+      border-radius 99px
+      font-size: 18px
+      &.cannel
+        background-color: #fff
+        color: #8cc152
+        border: 2px solid #8cc152
+      &.ok
+        background-color: #8cc152
+        border: 2px solid #8cc152

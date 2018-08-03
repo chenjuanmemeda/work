@@ -1,0 +1,310 @@
+
+.user-center-header
+  width 100%
+  background-color: #f9f9f9
+  font-size: 0
+  height 64px
+  .header-wrap
+    width 1200px
+    margin 0 auto
+    .logo
+      display block
+      margin-top 7px
+      float: left
+      .icon
+        display inline-block
+        margin-right 10px
+        width 50px
+        height 50px
+        -webkit-background-size: 100%
+        background-size: 100%
+        background-image: url(../../img/logo.png)
+        vertical-align: middle
+      .text
+        display inline-block
+        font-size: 24px
+        color: #c29949
+        vertical-align: middle
+        span
+          font-size: 16px
+    .user-wrap
+      display flex
+      width 40px
+      line-height 50px
+      float: right
+      vertical-align: middle
+    .download
+      float: right
+      display block
+      padding 20px
+      margin 0 20px
+      font-size: 16px
+      color: #a10
+      text-decoration underline
+  #avatar
+    display block
+    float: right
+    margin-top 11px
+    position: relative
+    width: 40px
+    height: 40px
+    border-radius: 99px
+    background-color: #fff
+    vertical-align: middle
+    -webkit-background-size: 100% 100%
+    background-size: 100% 100%
+    .user-info-wrap
+      display: none
+      position: absolute
+      top: 48px
+      right: -100px
+      z-index: 99
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
+      background-color: #fff
+      .avatarhref
+        position absolute
+        top -48px
+        right 99px
+        width 37px
+        height 37px
+        border-radius 99px
+        background-color: transparent
+      .user-info-header
+        width 410px
+        height 55px
+        background-image: url(../../img/user-info-header.png)
+        .border
+          position relative
+          height 10px
+          border-top: 2px solid #edc95a
+          &:before
+            position absolute
+            top -15px
+            left 0
+            width 100%
+            content ' '
+            background-color: transparent
+            height 15px
+          &:after
+            position absolute
+            content ' '
+            top -14px
+            right 113px
+            border-left 6px solid transparent
+            border-right 6px solid transparent
+            border-top 6px solid transparent
+            border-bottom 6px solid #EDC95A
+        .head
+          padding 0 0 12px
+          display flex
+          justify-content center
+          .left
+            flex 1
+            margin-left 12px
+            span
+              vertical-align: middle
+            .avatar
+              display inline-block
+              width 24px
+              height 24px
+              background-image: url(../../img/avatar-login.png)
+              -webkit-background-size: 100%
+              background-size: 100%
+          #logout
+            float: right
+            flex 0 0 50px
+            color: #999
+        .vipTime
+          margin-left 15px
+          font-size: 14px
+          .add_vip
+            padding 2px 10px
+            background-color: #8CC152
+            border-radius 20px
+            text-align center
+            color: #fff
+      .user-info-body
+        padding 15px 10px 20px
+        font-size: 0
+        .item
+          display block
+          float: left
+          background-repeat: no-repeat
+          border-radius: 999px
+          width 52px
+          height 52px
+          margin 0 13px 10px
+          -webkit-background-size: 100% 100%
+          background-size: 100% 100%
+          text-align center
+          background-color: rgb(249, 242, 219)
+          .icon
+            display block
+            margin 7px auto
+            width 40px
+            height: 40px
+            background-position: center center
+            -webkit-background-size: 80% 80%
+            background-size: 80% 80%
+            &.setting
+              background-image: url(../../img/head-icon-setting.png)
+            &.my-wallet
+              background-image: url(../../img/head-icon-mywallet.png)
+            &.candy-shop
+              background-image: url(../../img/head-icon-candy-shop.png)
+            &.vip
+              background-image: url(../../img/head-icon-vip.png)
+            &.def
+              background-image: url(../../img/head-icon-deafult.png)
+      .icon-name
+        span
+          display block
+          float: left
+          padding 0 5px
+          width 68px
+          text-align center
+      .text
+        display flex
+        padding 8px 50px 15px
+        span
+          flex 0 0 70px
+          text-align center
+    &.logout
+      background-image: url(../../img/avatar-default.png)
+      .user-info-wrap
+        display none
+    &.login:hover .user-info-wrap
+      display block
+  .methods-wrap, .userName-wrap
+    display inline-block
+    float: right
+    margin 0 15px
+    vertical-align: middle
+  .userName-wrap
+    display none
+    .user-text-info
+      padding: 13px 0
+  .nav-list
+    float: left
+    margin 0 70px
+    font-size: 0
+    .item
+      float: left
+      margin 0 10px
+      text-align center
+      a
+        padding 20px 10px
+        display block
+        font-size: 16px
+        &.active
+          border-bottom 3px solid #c8a858
+          color: #c8a858
+        &:hover
+          border-bottom 3px solid #c8a858
+          color: #c8a858
+
+@media screen and (max-width: 1367px)
+  .user-center-header
+    height 56px
+    .header-wrap
+      width 930px
+      .logo
+        .icon
+          width 40px
+          height 40px
+        .text
+          font-size: 18px
+          span
+            font-size: 12px
+    .nav-list
+      margin 0 30px
+      .item
+        margin 0 5px
+        a
+          padding 17px 10px
+          font-size: 14px
+    #avatar
+      margin-top 8px !important
+
+  .userName-wrap .user-text-info
+    padding 9px 0 !important
+
+//.user-info-wrap
+//  display block !important
+
+.node-tips
+  border-top 1px solid #eee
+  font-size: 16px
+  padding 6px 15px
+  #node-error-text
+    display none
+    margin-left: 15px
+    color: red
+    font-size: 14px
+
+.node-list
+  padding 10px 15px
+  font-size: 0
+  max-height 240px
+  overflow hidden
+  overflow-y scroll
+  li
+    line-height 25px
+    margin-bottom: 12px
+  .node
+    font-size: 14px
+    .left-content
+      display inline-block
+      font-size: 14px
+      .no
+        margin-right: 5px
+        text-align center
+        padding 2px 8px
+        background-color: #8cc152
+        color: #fff
+        font-style normal
+        vertical-align: middle
+      .name
+        font-size: 16px
+        vertical-align: middle
+    .ms
+      float: right
+      font-size: 12px
+      margin-right: 10px
+      vertical-align: middle
+      &.green
+        color: #00c600
+      &.yellow
+        color orange
+      &.red
+        color: red
+    .node-btn
+      float: right
+      padding 1px 5px
+      width 70px
+      text-align center
+      color: #fff
+      background-color: #e0c26c
+      cursor pointer
+      &.disabled
+        background-color: #bbb
+        cursor not-allowed
+
+.node-list::-webkit-scrollbar
+  width: 6px;
+
+.node-list::-webkit-scrollbar-track-piece
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-border-radius: 6px;
+
+.node-list::-webkit-scrollbar-thumb:vertical
+  height: 3px;
+  background-color: rgba(100, 100, 100, 0.4);
+  -webkit-border-radius: 26px;
+
+.node-list::-webkit-scrollbar-thumb:horizontal
+  width: 3px;
+  background-color: rgba(100, 100, 100, 0.4);
+  -webkit-border-radius: 26px;
+
+
